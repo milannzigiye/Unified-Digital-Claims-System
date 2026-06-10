@@ -1,0 +1,24 @@
+{
+  "name": "unified-digital-claims-system",
+  "version": "1.0.0",
+  "description": "Modern banking UI for claims management",
+  "type": "commonjs",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": ".\\node_modules\\.bin\\tailwindcss.cmd -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "watch:css": ".\\node_modules\\.bin\\tailwindcss.cmd -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "dev": "npm run watch:css"
+  },
+  "dependencies": {
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,5056 @@
+body.bk-role-page {
+  --bk-sidebar-width: 320px;
+  --bk-topbar-height: 0px;
+  --bk-content-gap: 0.95rem;
+  margin: 0;
+  padding: 0 !important;
+  font-family: var(--app-font), Inter, system-ui, sans-serif;
+  color: rgb(var(--bk-text-rgb));
+  background:
+    radial-gradient(circle at 100% 0%, rgba(var(--bk-primary-rgb), 0.105), transparent 42%),
+    radial-gradient(circle at 0% 100%, rgba(var(--bk-primary-rgb), 0.075), transparent 45%),
+    linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.03), rgba(var(--bk-bg-rgb), 0.98) 34%, rgba(var(--bk-white-rgb), 0.72)),
+    rgb(var(--bk-bg-rgb));
+  overflow-x: hidden;
+}
+
+body.bk-role-page .main-content {
+  margin-left: calc(var(--bk-sidebar-width) + var(--bk-content-gap)) !important;
+  margin-right: var(--bk-content-gap) !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  min-height: calc(100vh - var(--bk-topbar-height));
+  margin-top: 0.3rem !important;
+  padding: 1.15rem 1.25rem !important;
+  box-sizing: border-box !important;
+  background:
+    linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.038), rgba(var(--bk-surface-rgb), 0.95) 32%, rgba(var(--bk-white-rgb), 0.82));
+  border-radius: 1.05rem;
+}
+
+body.bk-role-page > .container,
+body.bk-role-page > .container-fluid:not(.main-content),
+body.bk-role-page > .profile-container {
+  margin-left: calc(var(--bk-sidebar-width) + var(--bk-content-gap)) !important;
+  margin-right: var(--bk-content-gap) !important;
+  width: auto !important;
+  max-width: none !important;
+  margin-top: 0.9rem !important;
+  padding-left: 1.15rem !important;
+  padding-right: 1.15rem !important;
+  box-sizing: border-box !important;
+}
+
+body.bk-role-page .main-content > .container,
+body.bk-role-page .main-content > .container-fluid,
+body.bk-role-page .dashboard-container > .container,
+body.bk-role-page .dashboard-container > .container-fluid,
+body.bk-role-page .claims-wrapper > .container,
+body.bk-role-page .claims-wrapper > .container-fluid,
+body.bk-role-page .reports-wrapper > .container,
+body.bk-role-page .reports-wrapper > .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Outer page wrappers should look like independent cards. */
+body.bk-role-page > .container,
+body.bk-role-page > .container-fluid:not(.main-content),
+body.bk-role-page > .profile-container,
+body.bk-role-page .chat-container,
+body.bk-role-page .dashboard-container,
+body.bk-role-page .claims-wrapper,
+body.bk-role-page .reports-wrapper {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1.05rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: 0 12px 30px rgba(3, 78, 162, 0.12) !important;
+}
+
+body.bk-role-page h1,
+body.bk-role-page h2,
+body.bk-role-page h3,
+body.bk-role-page h4,
+body.bk-role-page h5,
+body.bk-role-page h6 {
+  color: rgb(var(--bk-text-rgb));
+}
+
+body.bk-role-page .card,
+body.bk-role-page .stat-card,
+body.bk-role-page .dashboard-header,
+body.bk-role-page .welcome-message,
+body.bk-role-page .page-header,
+body.bk-role-page .controls-section,
+body.bk-role-page .claims-table-container,
+body.bk-role-page .table-container,
+body.bk-role-page .profile-card,
+body.bk-role-page .profile-container,
+body.bk-role-page .chat-area,
+body.bk-role-page .chat-users-bar,
+body.bk-role-page .messages-wrapper,
+body.bk-role-page .modal-content,
+body.bk-role-page .auth-wrapper {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: 0 10px 26px rgba(3, 78, 162, 0.1) !important;
+}
+
+body.bk-role-page .table,
+body.bk-role-page .claims-table,
+body.bk-role-page .data-table,
+body.bk-role-page table {
+  border-collapse: collapse !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  margin-bottom: 0;
+}
+
+body.bk-role-page .table thead th,
+body.bk-role-page .claims-table th,
+body.bk-role-page .data-table thead th,
+body.bk-role-page table thead th {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.2), rgba(var(--bk-primary-rgb), 0.1)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+body.bk-role-page .table td,
+body.bk-role-page .claims-table td,
+body.bk-role-page .data-table td,
+body.bk-role-page table td {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.95) !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  color: rgb(var(--bk-text-rgb));
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+body.bk-role-page .table > :not(caption) > * > * {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.95) !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+}
+
+body.bk-role-page .table tr:hover td,
+body.bk-role-page .claims-table tr:hover td,
+body.bk-role-page .data-table tr:hover td,
+body.bk-role-page table tr:hover td {
+  background: rgba(var(--bk-primary-rgb), 0.08);
+}
+
+body.bk-role-page .btn,
+body.bk-role-page .action-btn,
+body.bk-role-page .table-action-btn,
+body.bk-role-page .document-btn,
+body.bk-role-page .btn-submit,
+body.bk-role-page .btn-update,
+body.bk-role-page .btn-delete,
+body.bk-role-page .auth-button,
+body.bk-role-page .send-button,
+body.bk-role-page .btn-save,
+body.bk-role-page .btn-cancel {
+  border-radius: 0.72rem !important;
+  font-weight: 600 !important;
+  transition: all 0.18s ease !important;
+}
+
+body.bk-role-page .btn-primary,
+body.bk-role-page .btn-save,
+body.bk-role-page .btn-update,
+body.bk-role-page .auth-button,
+body.bk-role-page .send-button,
+body.bk-role-page button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) {
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .btn-primary:hover,
+body.bk-role-page .btn-save:hover,
+body.bk-role-page .btn-update:hover,
+body.bk-role-page .auth-button:hover,
+body.bk-role-page .send-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+body.bk-role-page .btn-danger,
+body.bk-role-page .btn-delete,
+body.bk-role-page .btn-reject {
+  border-color: rgb(var(--bk-danger-rgb)) !important;
+  background: rgb(var(--bk-danger-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .btn-warning {
+  border-color: rgb(var(--bk-warning-rgb)) !important;
+  background: rgb(var(--bk-warning-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .btn-secondary,
+body.bk-role-page .btn-cancel,
+body.bk-role-page .btn-refresh {
+  border-color: rgba(var(--bk-border-rgb), 1) !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .form-control,
+body.bk-role-page .form-input,
+body.bk-role-page .search-input,
+body.bk-role-page .filter-select,
+body.bk-role-page .message-input,
+body.bk-role-page .input-base,
+body.bk-role-page .ui-input,
+body.bk-role-page .ui-select,
+body.bk-role-page .main-content input[type="text"],
+body.bk-role-page .main-content input[type="email"],
+body.bk-role-page .main-content input[type="password"],
+body.bk-role-page .main-content input[type="tel"],
+body.bk-role-page .main-content input[type="number"],
+body.bk-role-page .main-content input[type="date"],
+body.bk-role-page .main-content select,
+body.bk-role-page .main-content textarea {
+  border: 1.8px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 0.74rem !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(var(--bk-surface-rgb), 0.98)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  min-height: 2.75rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 2px 6px rgba(3, 78, 162, 0.08) !important;
+}
+
+body.bk-role-page .form-label,
+body.bk-role-page .main-content label,
+body.bk-role-page .ui-label {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem;
+}
+
+body.bk-role-page .form-label.text-muted,
+body.bk-role-page .main-content label.text-muted {
+  color: rgb(var(--bk-text-rgb)) !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-page .form-label.small {
+  font-size: 0.84rem !important;
+  letter-spacing: 0.015em;
+}
+
+body.bk-role-page .form-control:focus,
+body.bk-role-page .form-input:focus,
+body.bk-role-page .search-input:focus,
+body.bk-role-page .filter-select:focus,
+body.bk-role-page .message-input:focus,
+body.bk-role-page .main-content input:focus,
+body.bk-role-page .main-content select:focus,
+body.bk-role-page .main-content textarea:focus {
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  box-shadow: 0 0 0 4px rgba(var(--bk-primary-rgb), 0.2) !important;
+  outline: none !important;
+}
+
+body.bk-role-page .main-content input::placeholder,
+body.bk-role-page .main-content textarea::placeholder {
+  color: rgba(var(--bk-muted-rgb), 1) !important;
+}
+
+body.bk-role-page .status-badge,
+body.bk-role-page .badge,
+body.bk-role-page .nav-badge {
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+}
+
+body.bk-role-page .toast,
+body.bk-role-page .alert {
+  border-radius: 0.75rem !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+}
+
+body.bk-role-page .alert,
+body.bk-role-page .toast,
+body.bk-role-page .ui-alert,
+body.bk-role-page .ui-toast {
+  background: rgb(var(--bk-surface-rgb)) !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+}
+
+body.bk-role-page .ui-alert-info {
+  background: rgba(var(--bk-primary-rgb), 0.12) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.32) !important;
+}
+
+body.bk-role-page .ui-alert-success {
+  background: rgba(var(--bk-success-rgb), 0.12) !important;
+  border-color: rgba(var(--bk-success-rgb), 0.32) !important;
+}
+
+body.bk-role-page .ui-alert-warning {
+  background: rgba(var(--bk-warning-rgb), 0.12) !important;
+  border-color: rgba(var(--bk-warning-rgb), 0.32) !important;
+}
+
+body.bk-role-page .ui-alert-danger {
+  background: rgba(var(--bk-danger-rgb), 0.12) !important;
+  border-color: rgba(var(--bk-danger-rgb), 0.32) !important;
+}
+
+body.bk-role-page .chat-container {
+  margin-left: calc(var(--bk-sidebar-width) + var(--bk-content-gap)) !important;
+  margin-right: var(--bk-content-gap) !important;
+  margin-top: 0.35rem !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  padding: 0.25rem 1rem 1rem !important;
+  box-sizing: border-box !important;
+}
+
+body.bk-role-page .chat-users-bar {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.08), rgba(var(--bk-surface-rgb), 1)) !important;
+  padding: 0.78rem 0.95rem !important;
+}
+
+body.bk-role-page .user-item {
+  border-radius: 0.8rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.04) !important;
+}
+
+body.bk-role-page .user-item:hover,
+body.bk-role-page .user-item.active {
+  background: rgba(var(--bk-primary-rgb), 0.18) !important;
+}
+
+body.bk-role-page .user-info h4 {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .chat-area {
+  min-height: 560px;
+}
+
+body.bk-role-page .messages-container {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.06) 0%, rgba(var(--bk-surface-rgb), 1) 52%, rgba(var(--bk-bg-rgb), 0.88) 100%) !important;
+}
+
+body.bk-role-page .message.sent {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .message.received {
+  background: rgb(var(--bk-surface-rgb)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 1);
+}
+
+body.bk-role-page .profile-container {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+}
+
+body.bk-role-page .profile-photo-container img {
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .modal-backdrop.show {
+  opacity: 0.45;
+}
+
+body.bk-role-page .dashboard-container,
+body.bk-role-page .claims-wrapper,
+body.bk-role-page .reports-wrapper {
+  margin-left: calc(var(--bk-sidebar-width) + var(--bk-content-gap)) !important;
+  margin-right: var(--bk-content-gap) !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin-top: 0.35rem !important;
+  padding: 1rem 1.15rem !important;
+  box-sizing: border-box !important;
+}
+
+body.bk-role-page .dashboard-content,
+body.bk-role-page .claims-content,
+body.bk-role-page .reports-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+body.bk-role-page .dashboard-header,
+body.bk-role-page .page-header {
+  color: rgb(var(--bk-text-rgb)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--bk-primary-rgb), 0.1),
+    rgba(var(--bk-surface-rgb), 0.95)
+  ) !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+}
+
+body.bk-role-page .dashboard-header h1,
+body.bk-role-page .dashboard-header h2,
+body.bk-role-page .dashboard-header p,
+body.bk-role-page .page-header h1,
+body.bk-role-page .page-header h2,
+body.bk-role-page .page-header p {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .filter-card,
+body.bk-role-page .filter-section,
+body.bk-role-page .table-container,
+body.bk-role-page .chart-container,
+body.bk-role-page .graph-container,
+body.bk-role-page .notification-item,
+body.bk-role-page .empty-state {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: 0 10px 26px rgba(3, 78, 162, 0.1) !important;
+}
+
+body.bk-role-page .table-header {
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.2), rgba(var(--bk-primary-rgb), 0.08)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .table-responsive {
+  border-radius: 0.95rem !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+}
+
+body.bk-role-page .overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+body.bk-role-page .table,
+body.bk-role-page table {
+  min-width: 680px;
+}
+
+body.bk-role-page .stats-grid,
+body.bk-role-page .charts-section,
+body.bk-role-page .filter-form {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important;
+}
+
+body.bk-role-page .page-header,
+body.bk-role-page .dashboard-header {
+  padding: 1.15rem 1.25rem !important;
+}
+
+body.bk-role-page .page-header h1,
+body.bk-role-page .dashboard-header h1,
+body.bk-role-page .page-header h2,
+body.bk-role-page .dashboard-header h2 {
+  font-size: clamp(1.22rem, 1.65vw, 1.72rem) !important;
+  line-height: 1.22 !important;
+}
+
+body.bk-role-page .table thead th {
+  white-space: nowrap;
+}
+
+body.bk-role-page .table td {
+  vertical-align: middle;
+}
+
+body.bk-role-page .btn:focus-visible,
+body.bk-role-page button:focus-visible,
+body.bk-role-page a:focus-visible,
+body.bk-role-page .form-control:focus-visible,
+body.bk-role-page .form-select:focus-visible {
+  outline: none !important;
+  box-shadow: var(--focus-ring) !important;
+}
+
+body.bk-role-page .table-container,
+body.bk-role-page .filter-section {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+body.bk-role-page .table-header {
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  background:
+    linear-gradient(130deg, rgba(var(--bk-primary-rgb), 0.12), rgba(var(--bk-primary-rgb), 0.04))
+    !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .pagination .page-link {
+  border-color: rgba(var(--bk-border-rgb), 1) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+}
+
+body.bk-role-page .pagination .page-item.active .page-link {
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .badge,
+body.bk-role-page .status-badge {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.85) !important;
+  background: rgba(var(--bk-primary-rgb), 0.18) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .card-header,
+body.bk-role-page .modal-header {
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  background: rgba(var(--bk-primary-rgb), 0.06) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .profile-hero {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1.15rem !important;
+  background:
+    linear-gradient(145deg, rgba(var(--bk-primary-rgb), 0.1), rgba(var(--bk-surface-rgb), 0.96))
+    !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+body.bk-role-page .profile-panel {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+body.bk-role-page .avatar-lg {
+  border-color: rgba(var(--bk-primary-rgb), 0.35) !important;
+}
+
+body.bk-role-page .last-updated,
+body.bk-role-page .notification-time,
+body.bk-role-page .comment-meta,
+body.bk-role-page .small,
+body.bk-role-page .text-muted {
+  color: rgb(var(--bk-muted-rgb)) !important;
+}
+
+/* Admin-specific normalization to prevent legacy page CSS from taking over */
+body.bk-role-admin .dashboard-header,
+body.bk-role-admin .page-header {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background:
+    linear-gradient(130deg, rgba(var(--bk-primary-rgb), 0.16), rgba(var(--bk-primary-rgb), 0.04))
+    !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+body.bk-role-admin .dashboard-header h1,
+body.bk-role-admin .dashboard-header h2,
+body.bk-role-admin .dashboard-header p,
+body.bk-role-admin .page-header h1,
+body.bk-role-admin .page-header h2,
+body.bk-role-admin .page-header p {
+  color: rgb(var(--bk-text-rgb)) !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-admin .stat-card,
+body.bk-role-admin .chart-container,
+body.bk-role-admin .graph-container,
+body.bk-role-admin .table-container,
+body.bk-role-admin .filter-section,
+body.bk-role-admin .filter-card {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+body.bk-role-admin .table-header {
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  background:
+    linear-gradient(130deg, rgba(var(--bk-primary-rgb), 0.14), rgba(var(--bk-primary-rgb), 0.03))
+    !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin .table thead {
+  background: transparent !important;
+}
+
+body.bk-role-admin .table thead th {
+  background: rgba(var(--bk-primary-rgb), 0.08) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin .btn-primary,
+body.bk-role-admin .btn-success,
+body.bk-role-admin button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) {
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .btn-primary:hover,
+body.bk-role-admin .btn-success:hover {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  filter: brightness(0.94);
+}
+
+body.bk-role-admin .badge-role-legal,
+body.bk-role-admin .badge-role-finance,
+body.bk-role-admin .badge-status-yes,
+body.bk-role-admin .badge-status-no {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.85) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  background: rgba(var(--bk-primary-rgb), 0.12) !important;
+}
+
+/* Opaque floating-card treatment for icon-opened views (modals). */
+body.bk-role-page .modal .modal-dialog {
+  margin-top: 1.2rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+body.bk-role-page .modal-content {
+  border: 1px solid rgba(var(--bk-border-rgb), 1) !important;
+  border-radius: 1rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 24px 56px rgba(3, 78, 162, 0.18), 0 8px 20px rgba(3, 78, 162, 0.14) !important;
+}
+
+body.bk-role-page .backdrop-blur,
+body.bk-role-page .backdrop-blur-sm,
+body.bk-role-page .backdrop-blur-xl,
+body.bk-role-page .backdrop-filter {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.bk-role-page .blur,
+body.bk-role-page .blur-3xl {
+  filter: none !important;
+}
+
+body.bk-role-page .modal-backdrop.show {
+  z-index: 1290 !important;
+  opacity: 0.58 !important;
+  background-color: rgba(3, 78, 162, 0.72) !important;
+}
+
+body.bk-role-page .modal {
+  z-index: 1300 !important;
+}
+
+/* Bootstrap dark utilities are mapped back to BK tones inside portals. */
+body.bk-role-page [class~="text-dark"],
+body.bk-role-page [class~="text-black"],
+body.bk-role-page [class~="text-black-50"],
+body.bk-role-page [class~="link-dark"] {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page [class~="bg-dark"],
+body.bk-role-page [class~="bg-black"],
+body.bk-role-page [class~="btn-dark"] {
+  background-color: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.9) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page [class~="border-dark"] {
+  border-color: rgba(var(--bk-primary-rgb), 0.5) !important;
+}
+
+body.bk-role-page [class~="shadow"],
+body.bk-role-page [class~="shadow-sm"],
+body.bk-role-page [class~="shadow-lg"] {
+  box-shadow: 0 18px 42px rgba(var(--bk-primary-rgb), 0.16) !important;
+}
+
+/* Final visual polish: spacing rhythm, typography hierarchy, and compact clarity. */
+body.bk-role-page .main-content,
+body.bk-role-page .dashboard-container,
+body.bk-role-page .claims-wrapper,
+body.bk-role-page .reports-wrapper,
+body.bk-role-page .chat-container,
+body.bk-role-page > .container,
+body.bk-role-page > .container-fluid:not(.main-content),
+body.bk-role-page > .profile-container {
+  line-height: 1.45 !important;
+}
+
+body.bk-role-page .main-content > * + *,
+body.bk-role-page .dashboard-container > * + *,
+body.bk-role-page .claims-wrapper > * + *,
+body.bk-role-page .reports-wrapper > * + * {
+  margin-top: 0.95rem !important;
+}
+
+body.bk-role-page .dashboard-header h1,
+body.bk-role-page .dashboard-header h2,
+body.bk-role-page .page-header h1,
+body.bk-role-page .page-header h2 {
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+}
+
+body.bk-role-page .dashboard-header p,
+body.bk-role-page .page-header p {
+  margin-top: 0.35rem !important;
+  max-width: 78ch !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.55 !important;
+}
+
+body.bk-role-page .card,
+body.bk-role-page .stat-card,
+body.bk-role-page .filter-card,
+body.bk-role-page .filter-section,
+body.bk-role-page .table-container,
+body.bk-role-page .chart-container,
+body.bk-role-page .graph-container,
+body.bk-role-page .profile-panel,
+body.bk-role-page .profile-card {
+  overflow: hidden !important;
+}
+
+body.bk-role-page .card-header,
+body.bk-role-page .table-header,
+body.bk-role-page .modal-header,
+body.bk-role-page .profile-hero {
+  padding: 0.85rem 1rem !important;
+}
+
+body.bk-role-page .card-body,
+body.bk-role-page .ui-card-body,
+body.bk-role-page .profile-panel,
+body.bk-role-page .filter-card,
+body.bk-role-page .table-container,
+body.bk-role-page .chart-container,
+body.bk-role-page .graph-container {
+  padding: 1rem 1.05rem !important;
+}
+
+body.bk-role-page .table thead th,
+body.bk-role-page .claims-table th,
+body.bk-role-page .data-table thead th,
+body.bk-role-page table thead th {
+  font-size: 0.74rem !important;
+  line-height: 1.25 !important;
+  padding: 0.62rem 0.72rem !important;
+}
+
+body.bk-role-page .table td,
+body.bk-role-page .claims-table td,
+body.bk-role-page .data-table td,
+body.bk-role-page table td {
+  font-size: 0.89rem !important;
+  line-height: 1.45 !important;
+  padding: 0.62rem 0.72rem !important;
+}
+
+body.bk-role-page .btn,
+body.bk-role-page .action-btn,
+body.bk-role-page .btn-submit,
+body.bk-role-page .btn-update,
+body.bk-role-page .btn-delete,
+body.bk-role-page .auth-button,
+body.bk-role-page .send-button,
+body.bk-role-page .btn-save,
+body.bk-role-page .btn-cancel {
+  min-height: 2.5rem !important;
+  padding: 0.54rem 0.9rem !important;
+}
+
+body.bk-role-page .table-action-btn,
+body.bk-role-page .document-btn {
+  min-width: 2.1rem !important;
+  min-height: 2.1rem !important;
+  padding: 0.35rem !important;
+}
+
+body.bk-role-page .form-label,
+body.bk-role-page .main-content label,
+body.bk-role-page .ui-label {
+  margin-bottom: 0.28rem !important;
+  line-height: 1.3 !important;
+}
+
+body.bk-role-page .form-control,
+body.bk-role-page .form-input,
+body.bk-role-page .search-input,
+body.bk-role-page .filter-select,
+body.bk-role-page .message-input,
+body.bk-role-page .input-base,
+body.bk-role-page .ui-input,
+body.bk-role-page .ui-select,
+body.bk-role-page .main-content input[type="text"],
+body.bk-role-page .main-content input[type="email"],
+body.bk-role-page .main-content input[type="password"],
+body.bk-role-page .main-content input[type="tel"],
+body.bk-role-page .main-content input[type="number"],
+body.bk-role-page .main-content input[type="date"],
+body.bk-role-page .main-content select,
+body.bk-role-page .main-content textarea {
+  font-size: 0.92rem !important;
+  line-height: 1.35 !important;
+}
+
+body.bk-role-page .chat-users-bar,
+body.bk-role-page .messages-wrapper,
+body.bk-role-page .chat-area {
+  padding: 0.85rem !important;
+}
+
+body.bk-role-page .user-item {
+  padding: 0.58rem 0.68rem !important;
+}
+
+body.bk-role-page .message {
+  padding: 0.58rem 0.74rem !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 991.98px) {
+  body.bk-role-page .main-content,
+  body.bk-role-page > .container,
+  body.bk-role-page > .container-fluid:not(.main-content),
+  body.bk-role-page > .profile-container,
+  body.bk-role-page .chat-container,
+  body.bk-role-page .dashboard-container,
+  body.bk-role-page .claims-wrapper,
+  body.bk-role-page .reports-wrapper {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin-right: 0 !important;
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+  }
+
+  body.bk-role-page .table,
+  body.bk-role-page table {
+    min-width: 620px;
+  }
+
+  body.bk-role-page .chat-area {
+    min-height: 65vh;
+  }
+}
+
+/* Final BK data grid pass: shared table styling for every role portal table. */
+body.bk-role-page {
+  --bk-grid-line: rgba(var(--bk-primary-rgb), 0.38);
+  --bk-grid-line-strong: rgba(var(--bk-primary-rgb), 0.58);
+  --bk-grid-row-strong: rgba(var(--bk-primary-rgb), 0.06);
+  --bk-grid-row-soft: rgba(var(--bk-primary-rgb), 0.021);
+  --bk-grid-row-hover: rgba(var(--bk-primary-rgb), 0.105);
+}
+
+body.bk-role-page .table-responsive,
+body.bk-role-page .table-scroll,
+body.bk-role-page .claims-table-container,
+body.bk-role-page .table-container {
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.18) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.05), rgba(var(--bk-surface-rgb), 1)) !important;
+}
+
+body.bk-role-page .table,
+body.bk-role-page .claims-table,
+body.bk-role-page .data-table,
+body.bk-role-page .activity-table,
+body.bk-role-page .finance-table,
+body.bk-role-page .legal-table,
+body.bk-role-page .dash-table,
+body.bk-role-page table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px dotted var(--bk-grid-line-strong) !important;
+  background: rgba(var(--bk-white-rgb), 0.5) !important;
+  box-shadow: 0 10px 24px rgba(3, 78, 162, 0.06) !important;
+  overflow: hidden !important;
+}
+
+body.bk-role-page .table thead th,
+body.bk-role-page .claims-table thead th,
+body.bk-role-page .claims-table th,
+body.bk-role-page .data-table thead th,
+body.bk-role-page .activity-table thead th,
+body.bk-role-page .activity-table th,
+body.bk-role-page .finance-table thead th,
+body.bk-role-page .finance-table th,
+body.bk-role-page .legal-table thead th,
+body.bk-role-page .legal-table th,
+body.bk-role-page .dash-table thead th,
+body.bk-role-page .dash-table th,
+body.bk-role-page table thead th {
+  border-top: 1px dotted var(--bk-grid-line-strong) !important;
+  border-right: 1px dotted var(--bk-grid-line) !important;
+  border-bottom: 1px dotted var(--bk-grid-line-strong) !important;
+  background:
+    linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.18), rgba(var(--bk-primary-rgb), 0.082)),
+    rgb(var(--bk-surface-rgb)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: uppercase !important;
+  box-shadow: inset 0 3px 0 rgba(var(--bk-primary-rgb), 0.72) !important;
+}
+
+body.bk-role-page .table tbody td,
+body.bk-role-page .table tbody th,
+body.bk-role-page .claims-table tbody td,
+body.bk-role-page .claims-table tbody th,
+body.bk-role-page .data-table tbody td,
+body.bk-role-page .data-table tbody th,
+body.bk-role-page .activity-table tbody td,
+body.bk-role-page .activity-table tbody th,
+body.bk-role-page .finance-table tbody td,
+body.bk-role-page .finance-table tbody th,
+body.bk-role-page .legal-table tbody td,
+body.bk-role-page .legal-table tbody th,
+body.bk-role-page .dash-table tbody td,
+body.bk-role-page .dash-table tbody th,
+body.bk-role-page table tbody td,
+body.bk-role-page table tbody th {
+  border-right: 1px dotted var(--bk-grid-line) !important;
+  border-bottom: 1px dotted var(--bk-grid-line) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  background-clip: padding-box !important;
+}
+
+body.bk-role-page .table > :not(caption) > * > *,
+body.bk-role-page table > :not(caption) > * > * {
+  border-right: 1px dotted var(--bk-grid-line) !important;
+  border-bottom: 1px dotted var(--bk-grid-line) !important;
+}
+
+body.bk-role-page .table thead th:first-child,
+body.bk-role-page .claims-table thead th:first-child,
+body.bk-role-page .data-table thead th:first-child,
+body.bk-role-page .activity-table thead th:first-child,
+body.bk-role-page .finance-table thead th:first-child,
+body.bk-role-page .legal-table thead th:first-child,
+body.bk-role-page .dash-table thead th:first-child,
+body.bk-role-page table thead th:first-child,
+body.bk-role-page .table tbody tr > *:first-child,
+body.bk-role-page .claims-table tbody tr > *:first-child,
+body.bk-role-page .data-table tbody tr > *:first-child,
+body.bk-role-page .activity-table tbody tr > *:first-child,
+body.bk-role-page .finance-table tbody tr > *:first-child,
+body.bk-role-page .legal-table tbody tr > *:first-child,
+body.bk-role-page .dash-table tbody tr > *:first-child,
+body.bk-role-page table tbody tr > *:first-child {
+  border-left: 1px dotted var(--bk-grid-line-strong) !important;
+}
+
+body.bk-role-page .table thead th:last-child,
+body.bk-role-page .claims-table thead th:last-child,
+body.bk-role-page .data-table thead th:last-child,
+body.bk-role-page .activity-table thead th:last-child,
+body.bk-role-page .finance-table thead th:last-child,
+body.bk-role-page .legal-table thead th:last-child,
+body.bk-role-page .dash-table thead th:last-child,
+body.bk-role-page table thead th:last-child,
+body.bk-role-page .table tbody tr > *:last-child,
+body.bk-role-page .claims-table tbody tr > *:last-child,
+body.bk-role-page .data-table tbody tr > *:last-child,
+body.bk-role-page .activity-table tbody tr > *:last-child,
+body.bk-role-page .finance-table tbody tr > *:last-child,
+body.bk-role-page .legal-table tbody tr > *:last-child,
+body.bk-role-page .dash-table tbody tr > *:last-child,
+body.bk-role-page table tbody tr > *:last-child {
+  border-right: 1px dotted var(--bk-grid-line-strong) !important;
+}
+
+body.bk-role-page .table tbody tr:nth-child(odd) > *,
+body.bk-role-page .claims-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .data-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .activity-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .finance-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .legal-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .dash-table tbody tr:nth-child(odd) > *,
+body.bk-role-page table tbody tr:nth-child(odd) > * {
+  background: var(--bk-grid-row-strong) !important;
+}
+
+body.bk-role-page .table tbody tr:nth-child(even) > *,
+body.bk-role-page .claims-table tbody tr:nth-child(even) > *,
+body.bk-role-page .data-table tbody tr:nth-child(even) > *,
+body.bk-role-page .activity-table tbody tr:nth-child(even) > *,
+body.bk-role-page .finance-table tbody tr:nth-child(even) > *,
+body.bk-role-page .legal-table tbody tr:nth-child(even) > *,
+body.bk-role-page .dash-table tbody tr:nth-child(even) > *,
+body.bk-role-page table tbody tr:nth-child(even) > * {
+  background: var(--bk-grid-row-soft) !important;
+}
+
+body.bk-role-page .table tbody tr:hover > *,
+body.bk-role-page .claims-table tbody tr:hover > *,
+body.bk-role-page .data-table tbody tr:hover > *,
+body.bk-role-page .activity-table tbody tr:hover > *,
+body.bk-role-page .finance-table tbody tr:hover > *,
+body.bk-role-page .legal-table tbody tr:hover > *,
+body.bk-role-page .dash-table tbody tr:hover > *,
+body.bk-role-page table tbody tr:hover > * {
+  background: var(--bk-grid-row-hover) !important;
+}
+
+body.bk-role-page .table-entity-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.34rem;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.38);
+  border-radius: 999px;
+  background: rgba(var(--bk-surface-rgb), 0.86);
+  color: rgb(var(--bk-primary-rgb));
+  padding: 0.28rem 0.56rem;
+  line-height: 1;
+  white-space: normal;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+body.bk-role-page .table-entity-label i {
+  color: rgb(var(--bk-primary-rgb));
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+}
+
+body.bk-role-page th.text-end .table-entity-label,
+body.bk-role-page th[class*="text-end"] .table-entity-label {
+  margin-left: auto;
+}
+
+body.bk-role-page .table-entity,
+body.bk-role-page .entity-chip,
+body.bk-role-page .claim-id,
+body.bk-role-page .claim-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.34rem;
+  width: fit-content;
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.38) !important;
+  border-radius: 0.72rem !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.15), rgba(var(--bk-primary-rgb), 0.07)) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.015em !important;
+  padding: 0.28rem 0.56rem !important;
+  line-height: 1.15 !important;
+}
+
+body.bk-role-page .entity-chip-muted {
+  border-color: rgba(var(--bk-border-rgb), 1) !important;
+  background: rgba(var(--bk-bg-rgb), 0.78) !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+}
+
+body.bk-role-page .entity-chip-wide {
+  max-width: 100%;
+  white-space: normal;
+}
+
+body.bk-role-page .action-chip {
+  border-color: rgba(var(--bk-warning-rgb), 0.42) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-warning-rgb), 0.18), rgba(var(--bk-warning-rgb), 0.08)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+/* Admin portal blue-dominance pass: one shared visual system for every Admin page. */
+body.bk-role-admin {
+  --admin-blue-950: #011f45;
+  --admin-blue-900: #012a5c;
+  --admin-blue-800: #023b7d;
+  --admin-blue-700: #034ea2;
+  --admin-blue-600: #0a5bb4;
+  --admin-line: rgba(255, 255, 255, 0.28);
+  --admin-line-strong: rgba(255, 255, 255, 0.45);
+  --admin-text: #ffffff;
+  --admin-muted: rgba(236, 246, 255, 0.88);
+  --admin-muted-strong: rgba(236, 246, 255, 0.95);
+  background:
+    radial-gradient(circle at 86% 8%, rgba(255, 255, 255, 0.2), transparent 26rem),
+    radial-gradient(circle at 12% 86%, rgba(255, 255, 255, 0.112), transparent 24rem),
+    linear-gradient(145deg, var(--admin-blue-950) 0%, var(--admin-blue-700) 48%, var(--admin-blue-800) 100%) !important;
+}
+
+body.bk-role-admin .main-content,
+body.bk-role-admin > .container,
+body.bk-role-admin > .container-fluid:not(.main-content),
+body.bk-role-admin > .profile-container {
+  position: relative !important;
+  border: 1px solid var(--admin-line) !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.2), transparent 22rem),
+    linear-gradient(155deg, var(--admin-blue-700) 0%, var(--admin-blue-900) 100%) !important;
+  box-shadow: 0 24px 52px rgba(3, 78, 162, 0.28) !important;
+  color: var(--admin-text) !important;
+}
+
+body.bk-role-admin .main-content::before,
+body.bk-role-admin > .container::before,
+body.bk-role-admin > .container-fluid:not(.main-content)::before,
+body.bk-role-admin > .profile-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.065) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.052) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(180deg, rgba(3, 78, 162, 0.72), transparent 78%);
+}
+
+body.bk-role-admin .main-content > *,
+body.bk-role-admin > .container > *,
+body.bk-role-admin > .container-fluid:not(.main-content) > *,
+body.bk-role-admin > .profile-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.bk-role-admin .admin-hero,
+body.bk-role-admin .admin-panel,
+body.bk-role-admin .kpi-card,
+body.bk-role-admin .hero,
+body.bk-role-admin .panel,
+body.bk-role-admin .card,
+body.bk-role-admin .claims-content,
+body.bk-role-admin .filter-card,
+body.bk-role-admin .table-shell,
+body.bk-role-admin .profile-hero,
+body.bk-role-admin .profile-card,
+body.bk-role-admin .chat-hero,
+body.bk-role-admin .chat-panel,
+body.bk-role-admin .contact-panel,
+body.bk-role-admin .modal-panel,
+body.bk-role-admin .bk-notif-panel,
+body.bk-role-admin .mline,
+body.bk-role-admin .d,
+body.bk-role-admin .claim-detail {
+  border-color: var(--admin-line) !important;
+  background:
+    linear-gradient(145deg, #074b97 0%, #02346e 100%) !important;
+  box-shadow: 0 18px 36px rgba(3, 78, 162, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.13) !important;
+  color: var(--admin-text) !important;
+}
+
+body.bk-role-admin .admin-hero,
+body.bk-role-admin .hero,
+body.bk-role-admin .profile-hero,
+body.bk-role-admin .chat-hero {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.22), transparent 18rem),
+    linear-gradient(135deg, var(--admin-blue-700) 0%, var(--admin-blue-900) 72%) !important;
+}
+
+body.bk-role-admin .admin-hero::before,
+body.bk-role-admin .hero::before,
+body.bk-role-admin .profile-hero::before,
+body.bk-role-admin .chat-hero::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0)) !important;
+}
+
+body.bk-role-admin .panel-head,
+body.bk-role-admin .admin-panel-head,
+body.bk-role-admin .admin-panel-foot,
+body.bk-role-admin .profile-card-head,
+body.bk-role-admin .modal-head,
+body.bk-role-admin .chat-header,
+body.bk-role-admin .input-area,
+body.bk-role-admin .bk-notif-head,
+body.bk-role-admin .bk-notif-foot,
+body.bk-role-admin .filters {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: #063f83 !important;
+  color: var(--admin-text) !important;
+}
+
+body.bk-role-admin h1,
+body.bk-role-admin h2,
+body.bk-role-admin h3,
+body.bk-role-admin h4,
+body.bk-role-admin h5,
+body.bk-role-admin h6,
+body.bk-role-admin .admin-hero h1,
+body.bk-role-admin .admin-panel-title,
+body.bk-role-admin .kpi-value,
+body.bk-role-admin .admin-link-title,
+body.bk-role-admin .admin-activity-title,
+body.bk-role-admin .hero h1,
+body.bk-role-admin .panel-title,
+body.bk-role-admin .profile-hero h1,
+body.bk-role-admin .profile-card-title,
+body.bk-role-admin .claims-page-header h2,
+body.bk-role-admin .chat-hero h1,
+body.bk-role-admin .contact-panel h2,
+body.bk-role-admin .chat-header h3,
+body.bk-role-admin .cell-main,
+body.bk-role-admin .d .v,
+body.bk-role-admin .mline .v,
+body.bk-role-admin .claim-detail .v,
+body.bk-role-admin .card .v,
+body.bk-role-admin .stats .card .v,
+body.bk-role-admin .claim-id,
+body.bk-role-admin .amount,
+body.bk-role-admin .text-bk-text,
+body.bk-role-admin .font-semibold,
+body.bk-role-admin .font-bold {
+  color: var(--admin-text) !important;
+}
+
+body.bk-role-admin p,
+body.bk-role-admin .admin-hero p,
+body.bk-role-admin .admin-panel-subtitle,
+body.bk-role-admin .kpi-label,
+body.bk-role-admin .admin-link .label,
+body.bk-role-admin .admin-activity-meta,
+body.bk-role-admin .hero-mini .k,
+body.bk-role-admin .hero p,
+body.bk-role-admin .panel-sub,
+body.bk-role-admin .subtle,
+body.bk-role-admin .muted,
+body.bk-role-admin .note,
+body.bk-role-admin .pager-note,
+body.bk-role-admin .empty,
+body.bk-role-admin .profile-hero p,
+body.bk-role-admin .profile-card-subtitle,
+body.bk-role-admin .claims-page-header p,
+body.bk-role-admin .chat-hero p,
+body.bk-role-admin .contact-panel p,
+body.bk-role-admin .chat-header p,
+body.bk-role-admin .no-chat-selected,
+body.bk-role-admin .messages-container .no-messages,
+body.bk-role-admin .cell-sub,
+body.bk-role-admin .d .k,
+body.bk-role-admin .mline .k,
+body.bk-role-admin .claim-detail .k,
+body.bk-role-admin .card .k,
+body.bk-role-admin .stats .card .k,
+body.bk-role-admin .text-bk-muted,
+body.bk-role-admin .text-bk-primary,
+body.bk-role-admin .text-bk-primary\/85 {
+  color: var(--admin-muted) !important;
+}
+
+body.bk-role-admin .tag,
+body.bk-role-admin .hero-tag,
+body.bk-role-admin .profile-tag,
+body.bk-role-admin .claims-total,
+body.bk-role-admin .status-chip,
+body.bk-role-admin .chip-count,
+body.bk-role-admin .claim-code,
+body.bk-role-admin .table-entity-label,
+body.bk-role-admin .entity-chip,
+body.bk-role-admin .action-chip,
+body.bk-role-admin .pill,
+body.bk-role-admin .role-pill,
+body.bk-role-admin .status-badge,
+body.bk-role-admin .claim-view {
+  border-color: var(--admin-line-strong) !important;
+  background: #0a5bb4 !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .table-entity-label i,
+body.bk-role-admin .entity-chip i,
+body.bk-role-admin .action-chip i {
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .status-chip.active,
+body.bk-role-admin .pager a.current,
+body.bk-role-admin .pager-link.is-current {
+  border-color: rgba(255, 255, 255, 0.54) !important;
+  background: #ffffff !important;
+  color: var(--admin-blue-700) !important;
+}
+
+body.bk-role-admin .badge-pending,
+body.bk-role-admin .status-badge.badge-pending {
+  border-color: rgba(245, 183, 0, 0.72) !important;
+  background: rgba(245, 183, 0, 0.18) !important;
+  color: #fff2b8 !important;
+}
+
+body.bk-role-admin .badge-approved,
+body.bk-role-admin .status-badge.badge-approved,
+body.bk-role-admin .ok {
+  border-color: rgba(202, 255, 222, 0.7) !important;
+  background: rgba(202, 255, 222, 0.14) !important;
+  color: #d9ffe8 !important;
+}
+
+body.bk-role-admin .badge-rejected,
+body.bk-role-admin .status-badge.badge-rejected,
+body.bk-role-admin .no {
+  border-color: rgba(255, 200, 200, 0.72) !important;
+  background: rgba(255, 200, 200, 0.16) !important;
+  color: #ffe1e1 !important;
+}
+
+body.bk-role-admin .badge-review,
+body.bk-role-admin .status-badge.badge-review {
+  border-color: rgba(191, 223, 255, 0.74) !important;
+  background: rgba(191, 223, 255, 0.16) !important;
+  color: #d7ecff !important;
+}
+
+body.bk-role-admin .hero-mini,
+body.bk-role-admin .admin-activity-item,
+body.bk-role-admin .admin-link,
+body.bk-role-admin .contact-item,
+body.bk-role-admin .no-chat-selected,
+body.bk-role-admin .messages-container .no-messages,
+body.bk-role-admin .bk-notif-item {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background: #064990 !important;
+  color: var(--admin-text) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-admin .hero-mini .v {
+  color: var(--admin-text) !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-admin .admin-activity-item:hover,
+body.bk-role-admin .admin-link:hover,
+body.bk-role-admin .contact-item:hover,
+body.bk-role-admin .contact-item.active,
+body.bk-role-admin .status-chip:hover,
+body.bk-role-admin .claim-view:hover {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: #0a5bb4 !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 28px rgba(3, 78, 162, 0.18) !important;
+}
+
+body.bk-role-admin .kpi-icon,
+body.bk-role-admin .admin-link-icon,
+body.bk-role-admin .avatar,
+body.bk-role-admin .send-btn,
+body.bk-role-admin .avatar .initials {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: #ffffff !important;
+  color: var(--admin-blue-700) !important;
+}
+
+body.bk-role-admin .send-btn:hover {
+  background: #eaf3ff !important;
+}
+
+body.bk-role-admin .bk-app-top-btn,
+body.bk-role-admin .ui-btn-secondary,
+body.bk-role-admin .action-btn,
+body.bk-role-admin .icon-btn,
+body.bk-role-admin .pager a,
+body.bk-role-admin .pager-link {
+  border-color: var(--admin-line) !important;
+  background: #063f83 !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .ui-btn-primary,
+body.bk-role-admin .btn-primary,
+body.bk-role-admin button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  background: #ffffff !important;
+  color: var(--admin-blue-700) !important;
+}
+
+body.bk-role-admin .ui-btn-primary:hover,
+body.bk-role-admin .ui-btn-secondary:hover,
+body.bk-role-admin .action-btn:hover,
+body.bk-role-admin .pager a:hover,
+body.bk-role-admin .pager-link:hover {
+  border-color: rgba(255, 255, 255, 0.82) !important;
+  background: #eaf3ff !important;
+  color: var(--admin-blue-700) !important;
+}
+
+body.bk-role-admin .bg-bk-danger,
+body.bk-role-admin .btn-danger {
+  border-color: rgba(255, 210, 210, 0.72) !important;
+  background: #d52929 !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin label,
+body.bk-role-admin .ui-label,
+body.bk-role-admin .field label {
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .ui-input,
+body.bk-role-admin .ui-select,
+body.bk-role-admin .form-control,
+body.bk-role-admin .form-input,
+body.bk-role-admin .search-input,
+body.bk-role-admin .filter-select,
+body.bk-role-admin .message-input,
+body.bk-role-admin input[type="text"],
+body.bk-role-admin input[type="email"],
+body.bk-role-admin input[type="password"],
+body.bk-role-admin input[type="tel"],
+body.bk-role-admin input[type="number"],
+body.bk-role-admin input[type="date"],
+body.bk-role-admin select,
+body.bk-role-admin textarea {
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  background: #f4f8ff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  box-shadow: 0 6px 16px rgba(3, 78, 162, 0.10) !important;
+}
+
+body.bk-role-admin .ui-input::placeholder,
+body.bk-role-admin .form-control::placeholder,
+body.bk-role-admin .form-input::placeholder,
+body.bk-role-admin .search-input::placeholder,
+body.bk-role-admin .message-input::placeholder,
+body.bk-role-admin input::placeholder,
+body.bk-role-admin textarea::placeholder {
+  color: rgba(var(--bk-muted-rgb), 0.86) !important;
+}
+
+body.bk-role-admin .table-responsive,
+body.bk-role-admin .table-scroll,
+body.bk-role-admin .claims-table-container,
+body.bk-role-admin .table-container,
+body.bk-role-admin .table-wrap {
+  border-color: var(--admin-line) !important;
+  background: #012a5c !important;
+  box-shadow: 0 18px 36px rgba(3, 78, 162, 0.22) !important;
+}
+
+body.bk-role-admin table,
+body.bk-role-admin .table,
+body.bk-role-admin .claims-table,
+body.bk-role-admin .activity-table {
+  border-color: var(--admin-line-strong) !important;
+  background: #02346e !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-admin table thead th,
+body.bk-role-admin .table thead th,
+body.bk-role-admin .claims-table th,
+body.bk-role-admin .activity-table th {
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  background: #0a5bb4 !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin table tbody td,
+body.bk-role-admin table tbody th,
+body.bk-role-admin .table tbody td,
+body.bk-role-admin .table tbody th,
+body.bk-role-admin .claims-table tbody td,
+body.bk-role-admin .claims-table tbody th,
+body.bk-role-admin .activity-table tbody td,
+body.bk-role-admin .activity-table tbody th {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin table tbody tr:nth-child(odd) > *,
+body.bk-role-admin .table tbody tr:nth-child(odd) > *,
+body.bk-role-admin .claims-table tbody tr:nth-child(odd) > *,
+body.bk-role-admin .activity-table tbody tr:nth-child(odd) > * {
+  background: #064990 !important;
+}
+
+body.bk-role-admin table tbody tr:nth-child(even) > *,
+body.bk-role-admin .table tbody tr:nth-child(even) > *,
+body.bk-role-admin .claims-table tbody tr:nth-child(even) > *,
+body.bk-role-admin .activity-table tbody tr:nth-child(even) > * {
+  background: #023f83 !important;
+}
+
+body.bk-role-admin table tbody tr:hover > *,
+body.bk-role-admin .table tbody tr:hover > *,
+body.bk-role-admin .claims-table tbody tr:hover > *,
+body.bk-role-admin .activity-table tbody tr:hover > * {
+  background: #0a5bb4 !important;
+}
+
+body.bk-role-admin .modal {
+  background: rgba(3, 78, 162, 0.88) !important;
+}
+
+body.bk-role-admin .messages-container {
+  background:
+    radial-gradient(circle at 20% 8%, rgba(255, 255, 255, 0.1), transparent 16rem),
+    #012a5c !important;
+}
+
+body.bk-role-admin .messages-container .message.sent {
+  border-color: rgba(255, 255, 255, 0.36) !important;
+  background: #ffffff !important;
+  color: var(--admin-blue-700) !important;
+}
+
+body.bk-role-admin .messages-container .message.received {
+  border-color: rgba(255, 255, 255, 0.26) !important;
+  background: #064990 !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .messages-container .message.received .message-header,
+body.bk-role-admin .messages-container .message-header {
+  color: var(--admin-muted) !important;
+}
+
+body.bk-role-admin .apexcharts-text,
+body.bk-role-admin .apexcharts-legend-text {
+  fill: rgba(255, 255, 255, 0.86) !important;
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+body.bk-role-admin .apexcharts-gridline {
+  stroke: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Minimalist recalibration: BK blue is the accent, not the whole surface. */
+body.bk-role-page {
+  --bk-grid-line: rgb(var(--bk-primary-rgb) / 0.24);
+  --bk-grid-line-strong: rgb(var(--bk-primary-rgb) / 0.36);
+  --bk-grid-row-strong: rgb(var(--bk-primary-rgb) / 0.035);
+  --bk-grid-row-soft: rgb(var(--bk-white-rgb) / 0.72);
+  --bk-grid-row-hover: rgb(var(--bk-primary-rgb) / 0.07);
+}
+
+body.bk-role-page {
+  background:
+    radial-gradient(circle at 100% 0%, rgb(var(--bk-primary-rgb) / 0.055), transparent 42%),
+    radial-gradient(circle at 0% 100%, rgb(var(--bk-primary-rgb) / 0.04), transparent 45%),
+    linear-gradient(180deg, rgb(var(--bk-primary-rgb) / 0.018), rgb(var(--bk-bg-rgb) / 0.72) 34%, rgb(var(--bk-white-rgb) / 0.82)),
+    rgb(var(--bk-bg-rgb)) !important;
+}
+
+body.bk-role-page .main-content,
+body.bk-role-page > .container,
+body.bk-role-page > .container-fluid:not(.main-content),
+body.bk-role-page > .profile-container,
+body.bk-role-page .chat-container,
+body.bk-role-page .dashboard-container,
+body.bk-role-page .claims-wrapper,
+body.bk-role-page .reports-wrapper {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-white-rgb) / 0.88), rgb(var(--bk-surface-rgb) / 0.78)) !important;
+  border-color: rgb(var(--bk-border-rgb) / 0.72) !important;
+  box-shadow: 0 12px 28px rgb(var(--bk-primary-rgb) / 0.07) !important;
+}
+
+body.bk-role-page .card,
+body.bk-role-page .stat-card,
+body.bk-role-page .dashboard-header,
+body.bk-role-page .welcome-message,
+body.bk-role-page .page-header,
+body.bk-role-page .controls-section,
+body.bk-role-page .claims-table-container,
+body.bk-role-page .table-container,
+body.bk-role-page .profile-card,
+body.bk-role-page .profile-container,
+body.bk-role-page .chat-area,
+body.bk-role-page .chat-users-bar,
+body.bk-role-page .messages-wrapper,
+body.bk-role-page .modal-content,
+body.bk-role-page .auth-wrapper,
+body.bk-role-page .filter-card,
+body.bk-role-page .filter-section,
+body.bk-role-page .chart-container,
+body.bk-role-page .graph-container,
+body.bk-role-page .profile-panel,
+body.bk-role-page .profile-hero {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-white-rgb) / 0.9), rgb(var(--bk-surface-rgb) / 0.72)) !important;
+  border-color: rgb(var(--bk-border-rgb) / 0.72) !important;
+  box-shadow: 0 10px 24px rgb(var(--bk-primary-rgb) / 0.065) !important;
+}
+
+body.bk-role-page .table-responsive,
+body.bk-role-page .table-scroll,
+body.bk-role-page .claims-table-container,
+body.bk-role-page .table-container {
+  background: rgb(var(--bk-white-rgb) / 0.76) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.18) !important;
+  box-shadow: 0 8px 18px rgb(var(--bk-primary-rgb) / 0.055) !important;
+}
+
+body.bk-role-page .table,
+body.bk-role-page .claims-table,
+body.bk-role-page .data-table,
+body.bk-role-page .activity-table,
+body.bk-role-page .finance-table,
+body.bk-role-page .legal-table,
+body.bk-role-page .dash-table,
+body.bk-role-page table {
+  border-color: rgb(var(--bk-primary-rgb) / 0.3) !important;
+  background: rgb(var(--bk-white-rgb) / 0.72) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-page .table thead th,
+body.bk-role-page .claims-table thead th,
+body.bk-role-page .claims-table th,
+body.bk-role-page .data-table thead th,
+body.bk-role-page .activity-table thead th,
+body.bk-role-page .activity-table th,
+body.bk-role-page .finance-table thead th,
+body.bk-role-page .finance-table th,
+body.bk-role-page .legal-table thead th,
+body.bk-role-page .legal-table th,
+body.bk-role-page .dash-table thead th,
+body.bk-role-page .dash-table th,
+body.bk-role-page table thead th {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-primary-rgb) / 0.075), rgb(var(--bk-primary-rgb) / 0.032)),
+    rgb(var(--bk-white-rgb) / 0.88) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.28) !important;
+  box-shadow: inset 0 2px 0 rgb(var(--bk-primary-rgb) / 0.28) !important;
+}
+
+body.bk-role-page .table tbody td,
+body.bk-role-page .table tbody th,
+body.bk-role-page .claims-table tbody td,
+body.bk-role-page .claims-table tbody th,
+body.bk-role-page .data-table tbody td,
+body.bk-role-page .data-table tbody th,
+body.bk-role-page .activity-table tbody td,
+body.bk-role-page .activity-table tbody th,
+body.bk-role-page .finance-table tbody td,
+body.bk-role-page .finance-table tbody th,
+body.bk-role-page .legal-table tbody td,
+body.bk-role-page .legal-table tbody th,
+body.bk-role-page .dash-table tbody td,
+body.bk-role-page .dash-table tbody th,
+body.bk-role-page table tbody td,
+body.bk-role-page table tbody th {
+  border-color: rgb(var(--bk-primary-rgb) / 0.2) !important;
+}
+
+body.bk-role-page .table-entity-label,
+body.bk-role-page .table-entity,
+body.bk-role-page .entity-chip,
+body.bk-role-page .claim-id,
+body.bk-role-page .claim-code,
+body.bk-role-page .action-chip {
+  background: rgb(var(--bk-white-rgb) / 0.82) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.24) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-page .table-entity-label i,
+body.bk-role-page .entity-chip i,
+body.bk-role-page .action-chip i {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .status-badge,
+body.bk-role-page .pill,
+body.bk-role-page .role-pill,
+body.bk-role-page .status-chip,
+body.bk-role-page .chip-count,
+body.bk-role-page .claim-view,
+body.bk-role-page .badge {
+  box-shadow: none !important;
+}
+
+body.bk-role-admin {
+  background:
+    radial-gradient(circle at 8% 14%, rgb(var(--bk-primary-rgb) / 0.07), transparent 24rem),
+    radial-gradient(circle at 90% 10%, rgb(var(--bk-primary-rgb) / 0.05), transparent 24rem),
+    linear-gradient(180deg, rgb(var(--bk-bg-rgb) / 0.78), rgb(var(--bk-white-rgb) / 0.88)) !important;
+}
+
+body.bk-role-admin .main-content,
+body.bk-role-admin > .container,
+body.bk-role-admin > .container-fluid:not(.main-content),
+body.bk-role-admin > .profile-container {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-white-rgb) / 0.9), rgb(var(--bk-surface-rgb) / 0.8)) !important;
+  border-color: rgb(var(--bk-border-rgb) / 0.74) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  box-shadow: 0 12px 30px rgb(var(--bk-primary-rgb) / 0.075) !important;
+}
+
+body.bk-role-admin .main-content::before,
+body.bk-role-admin > .container::before,
+body.bk-role-admin > .container-fluid:not(.main-content)::before,
+body.bk-role-admin > .profile-container::before,
+body.bk-role-admin .admin-hero::before,
+body.bk-role-admin .hero::before,
+body.bk-role-admin .profile-hero::before,
+body.bk-role-admin .chat-hero::before {
+  opacity: 0.18 !important;
+}
+
+body.bk-role-admin .admin-hero,
+body.bk-role-admin .admin-panel,
+body.bk-role-admin .kpi-card,
+body.bk-role-admin .hero,
+body.bk-role-admin .panel,
+body.bk-role-admin .card,
+body.bk-role-admin .claims-content,
+body.bk-role-admin .filter-card,
+body.bk-role-admin .table-shell,
+body.bk-role-admin .profile-hero,
+body.bk-role-admin .profile-card,
+body.bk-role-admin .chat-hero,
+body.bk-role-admin .chat-panel,
+body.bk-role-admin .contact-panel,
+body.bk-role-admin .modal-panel,
+body.bk-role-admin .bk-notif-panel,
+body.bk-role-admin .mline,
+body.bk-role-admin .d,
+body.bk-role-admin .claim-detail,
+body.bk-role-admin .hero-mini,
+body.bk-role-admin .admin-activity-item,
+body.bk-role-admin .admin-link,
+body.bk-role-admin .contact-item,
+body.bk-role-admin .no-chat-selected,
+body.bk-role-admin .messages-container .no-messages,
+body.bk-role-admin .bk-notif-item {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-white-rgb) / 0.88), rgb(var(--bk-surface-rgb) / 0.72)) !important;
+  border-color: rgb(var(--bk-border-rgb) / 0.72) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  box-shadow: 0 8px 20px rgb(var(--bk-primary-rgb) / 0.06) !important;
+}
+
+body.bk-role-admin .panel-head,
+body.bk-role-admin .admin-panel-head,
+body.bk-role-admin .admin-panel-foot,
+body.bk-role-admin .profile-card-head,
+body.bk-role-admin .modal-head,
+body.bk-role-admin .chat-header,
+body.bk-role-admin .input-area,
+body.bk-role-admin .bk-notif-head,
+body.bk-role-admin .bk-notif-foot,
+body.bk-role-admin .filters {
+  background: rgb(var(--bk-white-rgb) / 0.64) !important;
+  border-color: rgb(var(--bk-border-rgb) / 0.68) !important;
+}
+
+body.bk-role-admin h1,
+body.bk-role-admin h2,
+body.bk-role-admin h3,
+body.bk-role-admin h4,
+body.bk-role-admin h5,
+body.bk-role-admin h6,
+body.bk-role-admin .admin-hero h1,
+body.bk-role-admin .admin-panel-title,
+body.bk-role-admin .kpi-value,
+body.bk-role-admin .admin-link-title,
+body.bk-role-admin .admin-activity-title,
+body.bk-role-admin .hero h1,
+body.bk-role-admin .panel-title,
+body.bk-role-admin .profile-hero h1,
+body.bk-role-admin .profile-card-title,
+body.bk-role-admin .claims-page-header h2,
+body.bk-role-admin .chat-hero h1,
+body.bk-role-admin .contact-panel h2,
+body.bk-role-admin .chat-header h3,
+body.bk-role-admin .cell-main,
+body.bk-role-admin .d .v,
+body.bk-role-admin .mline .v,
+body.bk-role-admin .claim-detail .v,
+body.bk-role-admin .card .v,
+body.bk-role-admin .stats .card .v,
+body.bk-role-admin .amount,
+body.bk-role-admin .text-bk-text,
+body.bk-role-admin .font-semibold,
+body.bk-role-admin .font-bold {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin p,
+body.bk-role-admin .admin-hero p,
+body.bk-role-admin .admin-panel-subtitle,
+body.bk-role-admin .kpi-label,
+body.bk-role-admin .admin-link .label,
+body.bk-role-admin .admin-activity-meta,
+body.bk-role-admin .hero-mini .k,
+body.bk-role-admin .hero p,
+body.bk-role-admin .panel-sub,
+body.bk-role-admin .subtle,
+body.bk-role-admin .muted,
+body.bk-role-admin .note,
+body.bk-role-admin .pager-note,
+body.bk-role-admin .empty,
+body.bk-role-admin .profile-hero p,
+body.bk-role-admin .profile-card-subtitle,
+body.bk-role-admin .claims-page-header p,
+body.bk-role-admin .chat-hero p,
+body.bk-role-admin .contact-panel p,
+body.bk-role-admin .chat-header p,
+body.bk-role-admin .no-chat-selected,
+body.bk-role-admin .messages-container .no-messages,
+body.bk-role-admin .cell-sub,
+body.bk-role-admin .d .k,
+body.bk-role-admin .mline .k,
+body.bk-role-admin .claim-detail .k,
+body.bk-role-admin .card .k,
+body.bk-role-admin .stats .card .k,
+body.bk-role-admin .text-bk-muted,
+body.bk-role-admin .text-bk-primary,
+body.bk-role-admin .text-bk-primary\/85 {
+  color: rgb(var(--bk-muted-rgb)) !important;
+}
+
+body.bk-role-admin label,
+body.bk-role-admin .ui-label,
+body.bk-role-admin .field label {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin .tag,
+body.bk-role-admin .hero-tag,
+body.bk-role-admin .profile-tag,
+body.bk-role-admin .claims-total,
+body.bk-role-admin .status-chip,
+body.bk-role-admin .chip-count,
+body.bk-role-admin .claim-code,
+body.bk-role-admin .table-entity-label,
+body.bk-role-admin .entity-chip,
+body.bk-role-admin .action-chip,
+body.bk-role-admin .pill,
+body.bk-role-admin .role-pill,
+body.bk-role-admin .status-badge,
+body.bk-role-admin .claim-view {
+  background: rgb(var(--bk-white-rgb) / 0.82) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.24) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-admin .table-entity-label i,
+body.bk-role-admin .entity-chip i,
+body.bk-role-admin .action-chip i {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-admin .admin-activity-item:hover,
+body.bk-role-admin .admin-link:hover,
+body.bk-role-admin .contact-item:hover,
+body.bk-role-admin .contact-item.active,
+body.bk-role-admin .status-chip:hover,
+body.bk-role-admin .claim-view:hover {
+  background: rgb(var(--bk-primary-rgb) / 0.08) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.32) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-admin .bk-app-top-btn,
+body.bk-role-admin .ui-btn-secondary,
+body.bk-role-admin .action-btn,
+body.bk-role-admin .icon-btn,
+body.bk-role-admin .pager a,
+body.bk-role-admin .pager-link {
+  background: rgb(var(--bk-white-rgb) / 0.82) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.22) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-admin .ui-btn-primary,
+body.bk-role-admin .btn-primary,
+body.bk-role-admin button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .table-responsive,
+body.bk-role-admin .table-scroll,
+body.bk-role-admin .claims-table-container,
+body.bk-role-admin .table-container,
+body.bk-role-admin .table-wrap,
+body.bk-role-admin table,
+body.bk-role-admin .table,
+body.bk-role-admin .claims-table,
+body.bk-role-admin .activity-table {
+  background: rgb(var(--bk-white-rgb) / 0.78) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.22) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-admin table thead th,
+body.bk-role-admin .table thead th,
+body.bk-role-admin .claims-table th,
+body.bk-role-admin .activity-table th {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-primary-rgb) / 0.08), rgb(var(--bk-primary-rgb) / 0.035)),
+    rgb(var(--bk-white-rgb) / 0.86) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.26) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin table tbody td,
+body.bk-role-admin table tbody th,
+body.bk-role-admin .table tbody td,
+body.bk-role-admin .table tbody th,
+body.bk-role-admin .claims-table tbody td,
+body.bk-role-admin .claims-table tbody th,
+body.bk-role-admin .activity-table tbody td,
+body.bk-role-admin .activity-table tbody th {
+  border-color: rgb(var(--bk-primary-rgb) / 0.18) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin table tbody tr:nth-child(odd) > *,
+body.bk-role-admin .table tbody tr:nth-child(odd) > *,
+body.bk-role-admin .claims-table tbody tr:nth-child(odd) > *,
+body.bk-role-admin .activity-table tbody tr:nth-child(odd) > * {
+  background: rgb(var(--bk-primary-rgb) / 0.035) !important;
+}
+
+body.bk-role-admin table tbody tr:nth-child(even) > *,
+body.bk-role-admin .table tbody tr:nth-child(even) > *,
+body.bk-role-admin .claims-table tbody tr:nth-child(even) > *,
+body.bk-role-admin .activity-table tbody tr:nth-child(even) > * {
+  background: rgb(var(--bk-white-rgb) / 0.74) !important;
+}
+
+body.bk-role-admin table tbody tr:hover > *,
+body.bk-role-admin .table tbody tr:hover > *,
+body.bk-role-admin .claims-table tbody tr:hover > *,
+body.bk-role-admin .activity-table tbody tr:hover > * {
+  background: rgb(var(--bk-primary-rgb) / 0.07) !important;
+}
+
+body.bk-role-admin .messages-container {
+  background:
+    radial-gradient(circle at 20% 8%, rgb(var(--bk-primary-rgb) / 0.045), transparent 16rem),
+    rgb(var(--bk-white-rgb) / 0.8) !important;
+}
+
+body.bk-role-admin .messages-container .message.sent {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .messages-container .message.received {
+  background: rgb(var(--bk-white-rgb) / 0.82) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin .apexcharts-text,
+body.bk-role-admin .apexcharts-legend-text {
+  fill: rgb(var(--bk-text-rgb)) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin .apexcharts-gridline {
+  stroke: rgb(var(--bk-primary-rgb) / 0.12) !important;
+}
+
+/* Semantic text color pass: dark text on white, white text on BK blue. */
+body.bk-role-page .main-content,
+body.bk-role-page > .container,
+body.bk-role-page > .container-fluid:not(.main-content),
+body.bk-role-page > .profile-container,
+body.bk-role-page .chat-container,
+body.bk-role-page .dashboard-container,
+body.bk-role-page .claims-wrapper,
+body.bk-role-page .reports-wrapper,
+body.bk-role-page .card,
+body.bk-role-page .stat-card,
+body.bk-role-page .dashboard-header,
+body.bk-role-page .welcome-message,
+body.bk-role-page .page-header,
+body.bk-role-page .controls-section,
+body.bk-role-page .claims-table-container,
+body.bk-role-page .table-container,
+body.bk-role-page .profile-card,
+body.bk-role-page .profile-container,
+body.bk-role-page .chat-area,
+body.bk-role-page .chat-users-bar,
+body.bk-role-page .messages-wrapper,
+body.bk-role-page .modal-content,
+body.bk-role-page .auth-wrapper,
+body.bk-role-page .filter-card,
+body.bk-role-page .filter-section,
+body.bk-role-page .chart-container,
+body.bk-role-page .graph-container,
+body.bk-role-page .profile-panel,
+body.bk-role-page .profile-hero,
+body.bk-role-page table,
+body.bk-role-page .table,
+body.bk-role-page .claims-table,
+body.bk-role-page .data-table,
+body.bk-role-page .activity-table,
+body.bk-role-page .finance-table,
+body.bk-role-page .legal-table,
+body.bk-role-page .dash-table {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .table-entity-label,
+body.bk-role-page .table-entity,
+body.bk-role-page .entity-chip,
+body.bk-role-page .claim-id,
+body.bk-role-page .claim-code,
+body.bk-role-page .action-chip,
+body.bk-role-admin .tag,
+body.bk-role-admin .hero-tag,
+body.bk-role-admin .profile-tag,
+body.bk-role-admin .claims-total,
+body.bk-role-admin .status-chip,
+body.bk-role-admin .chip-count,
+body.bk-role-admin .claim-code,
+body.bk-role-admin .table-entity-label,
+body.bk-role-admin .entity-chip,
+body.bk-role-admin .action-chip,
+body.bk-role-admin .pill,
+body.bk-role-admin .role-pill,
+body.bk-role-admin .status-badge,
+body.bk-role-admin .claim-view {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .text-bk-primary {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .bg-bk-primary,
+body.bk-role-page .ui-btn-primary,
+body.bk-role-page .btn-primary,
+body.bk-role-page .btn-success,
+body.bk-role-page .send-button,
+body.bk-role-page .send-btn,
+body.bk-role-page .message.sent,
+body.bk-role-page .messages-container .message.sent,
+body.bk-role-page button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel),
+body.bk-role-admin .ui-btn-primary,
+body.bk-role-admin .btn-primary,
+body.bk-role-admin .messages-container .message.sent,
+body.bk-role-admin button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) {
+  color: #ffffff !important;
+}
+
+body.bk-role-page .bg-bk-primary *,
+body.bk-role-page .ui-btn-primary *,
+body.bk-role-page .btn-primary *,
+body.bk-role-page .btn-success *,
+body.bk-role-page .send-button *,
+body.bk-role-page .send-btn *,
+body.bk-role-page .message.sent *,
+body.bk-role-page .messages-container .message.sent *,
+body.bk-role-page button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) *,
+body.bk-role-admin .ui-btn-primary *,
+body.bk-role-admin .btn-primary *,
+body.bk-role-admin .messages-container .message.sent *,
+body.bk-role-admin button[type="submit"]:not(.btn-danger):not(.btn-delete):not(.btn-cancel) * {
+  color: #ffffff !important;
+}
+
+body.bk-role-page .main-content h1,
+body.bk-role-page .main-content h2,
+body.bk-role-page .main-content h3,
+body.bk-role-page .main-content h4,
+body.bk-role-page .main-content h5,
+body.bk-role-page .main-content h6,
+body.bk-role-page .main-content label,
+body.bk-role-page .main-content th,
+body.bk-role-page .main-content td,
+body.bk-role-page .main-content input,
+body.bk-role-page .main-content select,
+body.bk-role-page .main-content textarea,
+body.bk-role-page .modal-content h1,
+body.bk-role-page .modal-content h2,
+body.bk-role-page .modal-content h3,
+body.bk-role-page .modal-content h4,
+body.bk-role-page .modal-content h5,
+body.bk-role-page .modal-content h6,
+body.bk-role-page .modal-content label,
+body.bk-role-page .modal-content th,
+body.bk-role-page .modal-content td,
+body.bk-role-page .modal-content input,
+body.bk-role-page .modal-content select,
+body.bk-role-page .modal-content textarea {
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .main-content .muted,
+body.bk-role-page .main-content .subtle,
+body.bk-role-page .main-content .note,
+body.bk-role-page .main-content .hint,
+body.bk-role-page .main-content .text-bk-muted,
+body.bk-role-page .main-content small,
+body.bk-role-page .modal-content .muted,
+body.bk-role-page .modal-content .subtle,
+body.bk-role-page .modal-content .note,
+body.bk-role-page .modal-content .hint,
+body.bk-role-page .modal-content .text-bk-muted,
+body.bk-role-page .modal-content small {
+  color: rgb(var(--bk-muted-rgb)) !important;
+}
+
+body.bk-role-page .main-content .bg-bk-primary,
+body.bk-role-page .main-content .bg-bk-primary *,
+body.bk-role-page .modal-content .bg-bk-primary,
+body.bk-role-page .modal-content .bg-bk-primary *,
+body.bk-role-page .bk-app-sidebar,
+body.bk-role-page .bk-app-sidebar * {
+  color: #ffffff !important;
+}
+
+/* Targeted redesign pass: Admin claims, Admin profile, and portal messaging. */
+body.bk-role-admin .claims-wrapper {
+  padding: 1.1rem 1.15rem 2.25rem !important;
+}
+
+body.bk-role-admin .claims-content {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+body.bk-role-admin .claims-page-header {
+  align-items: center !important;
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.26) !important;
+  border-radius: 1.45rem !important;
+  background:
+    radial-gradient(circle at 93% -12%, rgb(255 255 255 / 0.2), transparent 16rem),
+    linear-gradient(135deg, #034ea2 0%, #063f83 55%, #082b58 100%) !important;
+  box-shadow: 0 22px 44px rgb(var(--bk-primary-rgb) / 0.18) !important;
+  margin-bottom: 1rem !important;
+  padding: 1.25rem 1.35rem !important;
+}
+
+body.bk-role-admin .claims-page-header h2,
+body.bk-role-admin .claims-page-header p {
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .claims-page-header h2 {
+  margin: 0 !important;
+  font-size: clamp(1.7rem, 2.6vw, 2.35rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.bk-role-admin .claims-page-header p {
+  margin-top: 0.38rem !important;
+  max-width: 44rem !important;
+  opacity: 0.88 !important;
+}
+
+body.bk-role-admin .claims-page-header .ui-btn {
+  border-color: rgb(255 255 255 / 0.58) !important;
+  background: rgb(255 255 255 / 0.14) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-admin .claims-page-header .ui-btn:hover {
+  background: #ffffff !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-admin .filter-card {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.25rem !important;
+  background: rgb(var(--bk-white-rgb)) !important;
+  box-shadow: 0 16px 34px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  padding: 1rem !important;
+}
+
+body.bk-role-admin .filter-grid {
+  grid-template-columns: minmax(220px, 1.55fr) minmax(160px, 0.9fr) minmax(150px, 0.75fr) minmax(150px, 0.75fr) auto !important;
+  gap: 0.85rem !important;
+}
+
+body.bk-role-admin .field label {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-admin .claims-wrapper .ui-input,
+body.bk-role-admin .claims-wrapper .ui-select {
+  border-color: rgb(var(--bk-border-rgb) / 0.95) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  min-height: 2.95rem !important;
+  box-shadow: inset 0 0 0 1px rgb(var(--bk-primary-rgb) / 0.03) !important;
+}
+
+body.bk-role-admin .status-shortcuts {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  gap: 0.72rem !important;
+  margin: 1rem 0 !important;
+}
+
+body.bk-role-admin .status-chip {
+  justify-content: space-between !important;
+  min-height: 4.15rem !important;
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.1rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 26px rgb(var(--bk-primary-rgb) / 0.07) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.86rem 0.94rem !important;
+}
+
+body.bk-role-admin .status-chip:hover {
+  background: rgb(var(--bk-primary-rgb) / 0.06) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.42) !important;
+}
+
+body.bk-role-admin .status-chip.active {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .status-chip .chip-count {
+  min-width: 2.2rem !important;
+  min-height: 2.2rem !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.2) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.08) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.82rem !important;
+}
+
+body.bk-role-admin .status-chip.active .chip-count {
+  border-color: rgb(255 255 255 / 0.52) !important;
+  background: rgb(255 255 255 / 0.2) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .table-shell {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.28rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 18px 38px rgb(var(--bk-primary-rgb) / 0.1) !important;
+}
+
+body.bk-role-admin .claims-table {
+  min-width: 1140px !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  background: #ffffff !important;
+}
+
+body.bk-role-admin .claims-table th {
+  border-right: 1px dotted rgb(255 255 255 / 0.46) !important;
+  border-bottom: 1px solid rgb(var(--bk-primary-rgb) / 0.85) !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  font-size: 0.72rem !important;
+  padding: 0.88rem 0.8rem !important;
+}
+
+body.bk-role-admin .claims-table th .table-entity-label,
+body.bk-role-admin .claims-table th .table-entity-label i {
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .claims-table td {
+  border-right: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.3) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.92rem 0.8rem !important;
+}
+
+body.bk-role-admin .claims-table tbody tr:nth-child(odd) td {
+  background: rgb(var(--bk-primary-rgb) / 0.045) !important;
+}
+
+body.bk-role-admin .claims-table tbody tr:hover td {
+  background: rgb(var(--bk-primary-rgb) / 0.09) !important;
+}
+
+body.bk-role-admin .claim-id {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 850 !important;
+}
+
+body.bk-role-admin .status-badge {
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+  font-size: 0.78rem !important;
+}
+
+body.bk-role-admin .actions {
+  justify-content: flex-start !important;
+}
+
+body.bk-role-admin .action-btn {
+  gap: 0.42rem !important;
+  width: auto !important;
+  min-width: auto !important;
+  min-height: 2.35rem !important;
+  border-radius: 999px !important;
+  padding: 0.38rem 0.72rem !important;
+  font-weight: 750 !important;
+}
+
+body.bk-role-admin .action-btn.is-view {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .action-btn.is-message {
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-admin #claimModal.modal {
+  background: rgb(4 22 48 / 0.72) !important;
+}
+
+body.bk-role-admin #claimModal .modal-panel {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.3rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 24px 70px rgb(2 22 50 / 0.34) !important;
+}
+
+body.bk-role-admin #claimModal .modal-head {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  padding: 1rem 1.1rem !important;
+}
+
+body.bk-role-admin #claimModal .modal-head h2,
+body.bk-role-admin #claimModal .modal-head i {
+  color: #ffffff !important;
+}
+
+body.bk-role-admin #claimModal .modal-body {
+  padding: 1.05rem !important;
+}
+
+body.bk-role-admin #claimModal .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+body.bk-role-admin #claimModal .d {
+  border: 1px dotted rgb(var(--bk-primary-rgb) / 0.32) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.035) !important;
+}
+
+body.bk-role-admin .profile-shell {
+  max-width: 1180px !important;
+  padding: 1.15rem 1.15rem 2.25rem !important;
+}
+
+body.bk-role-admin .profile-hero {
+  border: 0 !important;
+  border-radius: 1.45rem !important;
+  background:
+    radial-gradient(circle at 92% -18%, rgb(255 255 255 / 0.2), transparent 16rem),
+    linear-gradient(135deg, #034ea2 0%, #063f83 55%, #082b58 100%) !important;
+  box-shadow: 0 22px 44px rgb(var(--bk-primary-rgb) / 0.18) !important;
+  padding: 1.45rem 1.55rem !important;
+}
+
+body.bk-role-admin .profile-hero::before {
+  display: none !important;
+}
+
+body.bk-role-admin .profile-hero h1,
+body.bk-role-admin .profile-hero p {
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .profile-hero h1 {
+  margin: 0 !important;
+  font-size: clamp(1.8rem, 2.7vw, 2.45rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.bk-role-admin .profile-hero p {
+  max-width: 44rem !important;
+  opacity: 0.88 !important;
+}
+
+body.bk-role-admin .profile-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr) !important;
+  gap: 1rem !important;
+  align-items: start !important;
+}
+
+body.bk-role-admin .profile-card,
+body.bk-role-admin .security-notes {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.25rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 16px 34px rgb(var(--bk-primary-rgb) / 0.08) !important;
+}
+
+body.bk-role-admin .profile-card-head {
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.26) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.05) !important;
+  padding: 1rem 1.1rem !important;
+}
+
+body.bk-role-admin .profile-card-title {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1.08rem !important;
+}
+
+body.bk-role-admin .profile-card-body {
+  padding: 1.05rem 1.1rem !important;
+}
+
+body.bk-role-admin .profile-shell .ui-label {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-admin .profile-shell .ui-input {
+  border-color: rgb(var(--bk-border-rgb) / 0.95) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  min-height: 3rem !important;
+}
+
+body.bk-role-admin .profile-shell .ui-btn-primary {
+  min-height: 3rem !important;
+  border-radius: 999px !important;
+  padding-inline: 1.25rem !important;
+}
+
+body.bk-role-admin .security-notes {
+  padding: 1.05rem !important;
+}
+
+body.bk-role-admin .security-notes-head {
+  display: flex !important;
+  gap: 0.85rem !important;
+  align-items: flex-start !important;
+}
+
+body.bk-role-admin .security-icon {
+  display: inline-flex !important;
+  width: 2.55rem !important;
+  height: 2.55rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.9rem !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-admin .security-notes h2 {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1.05rem !important;
+  font-weight: 850 !important;
+}
+
+body.bk-role-admin .security-notes p {
+  margin: 0.22rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.88rem !important;
+}
+
+body.bk-role-admin .security-rule-list {
+  display: grid !important;
+  gap: 0.7rem !important;
+  list-style: none !important;
+  margin: 1rem 0 0 !important;
+  padding: 0 !important;
+}
+
+body.bk-role-admin .security-rule-list li {
+  display: flex !important;
+  gap: 0.65rem !important;
+  align-items: flex-start !important;
+  border: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  border-radius: 0.95rem !important;
+  background: rgb(var(--bk-primary-rgb) / 0.04) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.72rem !important;
+}
+
+body.bk-role-admin .security-rule-list i {
+  color: rgb(var(--bk-primary-rgb)) !important;
+  margin-top: 0.12rem !important;
+}
+
+body.bk-role-page .chat-hero {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-left: 0.42rem solid rgb(var(--bk-primary-rgb)) !important;
+  border-radius: 1.25rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 16px 34px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  padding: 1rem 1.1rem !important;
+}
+
+body.bk-role-page .chat-hero::before {
+  display: none !important;
+}
+
+body.bk-role-page .chat-hero h1 {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: clamp(1.55rem, 2.2vw, 2rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.03em !important;
+}
+
+body.bk-role-page .chat-hero p {
+  color: rgb(var(--bk-muted-rgb)) !important;
+}
+
+body.bk-role-page .chat-layout {
+  display: grid !important;
+  grid-template-columns: minmax(260px, 330px) minmax(0, 1fr) !important;
+  gap: 1rem !important;
+  min-height: calc(100vh - 220px) !important;
+}
+
+body.bk-role-page .contact-panel,
+body.bk-role-page .chat-panel {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.25rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 16px 34px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  overflow: hidden !important;
+}
+
+body.bk-role-page .contact-panel > header {
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.045) !important;
+}
+
+body.bk-role-page .contact-panel h2,
+body.bk-role-page .chat-header h3 {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 850 !important;
+}
+
+body.bk-role-page .contact-list {
+  gap: 0.55rem !important;
+  padding: 0.7rem !important;
+}
+
+body.bk-role-page .contact-item {
+  position: relative !important;
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.9) !important;
+  border-radius: 1rem !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.7rem !important;
+  box-shadow: 0 8px 20px rgb(var(--bk-primary-rgb) / 0.05) !important;
+}
+
+body.bk-role-page .contact-item::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  width: 0.24rem !important;
+  border-radius: 1rem 0 0 1rem !important;
+  background: transparent !important;
+}
+
+body.bk-role-page .contact-item:hover,
+body.bk-role-page .contact-item.active {
+  transform: translateY(-1px) !important;
+  border-color: rgb(var(--bk-primary-rgb) / 0.48) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.055) !important;
+}
+
+body.bk-role-page .contact-item.active::before {
+  background: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .avatar {
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.28) !important;
+  border-radius: 0.92rem !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .avatar .initials {
+  color: #ffffff !important;
+  font-weight: 850 !important;
+}
+
+body.bk-role-page .role-pill {
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.22) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.08) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-page .chat-header {
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  background: #ffffff !important;
+  padding: 0.9rem 1rem !important;
+}
+
+body.bk-role-page .messages-container {
+  background:
+    linear-gradient(180deg, rgb(var(--bk-primary-rgb) / 0.04), transparent 12rem),
+    repeating-linear-gradient(0deg, rgb(var(--bk-primary-rgb) / 0.035) 0 1px, transparent 1px 42px),
+    #f8fbff !important;
+  gap: 0.7rem !important;
+  padding: 1rem !important;
+}
+
+body.bk-role-page .messages-container .message {
+  border-radius: 1rem !important;
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  box-shadow: 0 10px 24px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  padding: 0.68rem 0.78rem !important;
+}
+
+body.bk-role-page .messages-container .message.sent {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .messages-container .message.sent * {
+  color: #ffffff !important;
+}
+
+body.bk-role-page .messages-container .message.received {
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .messages-container .no-messages,
+body.bk-role-page .no-chat-selected {
+  border: 1px dotted rgb(var(--bk-primary-rgb) / 0.34) !important;
+  border-radius: 1.1rem !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  padding: 1.2rem !important;
+}
+
+body.bk-role-page .input-area {
+  border-top: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  background: #ffffff !important;
+  padding: 0.8rem 0.9rem !important;
+}
+
+body.bk-role-page .message-input {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1rem !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  min-height: 2.75rem !important;
+  padding: 0.7rem 0.85rem !important;
+}
+
+body.bk-role-page .send-btn {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .message-feedback.is-success {
+  background: rgb(22 163 74 / 0.1) !important;
+  border-color: rgb(22 163 74 / 0.32) !important;
+  color: #166534 !important;
+}
+
+body.bk-role-page .message-feedback.is-error {
+  background: rgb(220 38 38 / 0.1) !important;
+  border-color: rgb(220 38 38 / 0.32) !important;
+  color: #991b1b !important;
+}
+
+@media (max-width: 1100px) {
+  body.bk-role-page .chat-layout,
+  body.bk-role-admin .profile-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body.bk-role-admin .filter-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.bk-role-admin #claimModal .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.bk-role-admin .claims-page-header,
+  body.bk-role-admin .profile-hero {
+    border-radius: 1.1rem !important;
+  }
+}
+
+/* Portal unification: make every role page follow the Admin Claims Review language. */
+body.bk-role-page .main-content {
+  background:
+    radial-gradient(circle at 92% 0%, rgb(var(--bk-primary-rgb) / 0.065), transparent 18rem),
+    linear-gradient(180deg, rgb(var(--bk-primary-rgb) / 0.045), transparent 18rem) !important;
+}
+
+body.bk-role-page .admin-hero,
+body.bk-role-page .dash-hero,
+body.bk-role-page .claims-hero,
+body.bk-role-page .finance-hero,
+body.bk-role-page .legal-hero,
+body.bk-role-page .profile-hero,
+body.bk-role-page .chat-hero,
+body.bk-role-page .page-header,
+body.bk-role-page .dashboard-header,
+body.bk-role-page .welcome-message,
+body.bk-role-page .hero,
+body.bk-role-page .claims-page-header {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.3) !important;
+  border-radius: 1.45rem !important;
+  background:
+    radial-gradient(circle at 92% -18%, rgb(255 255 255 / 0.22), transparent 16rem),
+    linear-gradient(135deg, #034ea2 0%, #063f83 58%, #082b58 100%) !important;
+  box-shadow: 0 22px 44px rgb(var(--bk-primary-rgb) / 0.18) !important;
+  padding: 1.25rem 1.35rem !important;
+}
+
+body.bk-role-page .admin-hero::before,
+body.bk-role-page .dash-hero::before,
+body.bk-role-page .claims-hero::before,
+body.bk-role-page .finance-hero::before,
+body.bk-role-page .legal-hero::before,
+body.bk-role-page .profile-hero::before,
+body.bk-role-page .chat-hero::before,
+body.bk-role-page .page-header::before,
+body.bk-role-page .dashboard-header::before,
+body.bk-role-page .welcome-message::before,
+body.bk-role-page .hero::before,
+body.bk-role-page .claims-page-header::before {
+  display: none !important;
+}
+
+body.bk-role-page .admin-hero h1,
+body.bk-role-page .admin-hero h2,
+body.bk-role-page .admin-hero p,
+body.bk-role-page .dash-hero h1,
+body.bk-role-page .dash-hero h2,
+body.bk-role-page .dash-hero p,
+body.bk-role-page .claims-hero h1,
+body.bk-role-page .claims-hero h2,
+body.bk-role-page .claims-hero p,
+body.bk-role-page .finance-hero h1,
+body.bk-role-page .finance-hero h2,
+body.bk-role-page .finance-hero p,
+body.bk-role-page .legal-hero h1,
+body.bk-role-page .legal-hero h2,
+body.bk-role-page .legal-hero p,
+body.bk-role-page .profile-hero h1,
+body.bk-role-page .profile-hero h2,
+body.bk-role-page .profile-hero p,
+body.bk-role-page .chat-hero h1,
+body.bk-role-page .chat-hero h2,
+body.bk-role-page .chat-hero p,
+body.bk-role-page .page-header h1,
+body.bk-role-page .page-header h2,
+body.bk-role-page .page-header p,
+body.bk-role-page .dashboard-header h1,
+body.bk-role-page .dashboard-header h2,
+body.bk-role-page .dashboard-header p,
+body.bk-role-page .welcome-message h1,
+body.bk-role-page .welcome-message h2,
+body.bk-role-page .welcome-message p,
+body.bk-role-page .hero h1,
+body.bk-role-page .hero h2,
+body.bk-role-page .hero p,
+body.bk-role-page .claims-page-header h1,
+body.bk-role-page .claims-page-header h2,
+body.bk-role-page .claims-page-header p {
+  color: #ffffff !important;
+}
+
+body.bk-role-page .admin-hero h1,
+body.bk-role-page .dash-hero h1,
+body.bk-role-page .claims-hero h1,
+body.bk-role-page .finance-hero h1,
+body.bk-role-page .legal-hero h1,
+body.bk-role-page .profile-hero h1,
+body.bk-role-page .chat-hero h1,
+body.bk-role-page .page-header h1,
+body.bk-role-page .dashboard-header h1,
+body.bk-role-page .welcome-message h1,
+body.bk-role-page .hero h1,
+body.bk-role-page .claims-page-header h2 {
+  margin-top: 0 !important;
+  font-size: clamp(1.7rem, 2.7vw, 2.35rem) !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.bk-role-page .admin-hero p,
+body.bk-role-page .dash-hero p,
+body.bk-role-page .claims-hero p,
+body.bk-role-page .finance-hero p,
+body.bk-role-page .legal-hero p,
+body.bk-role-page .profile-hero p,
+body.bk-role-page .chat-hero p,
+body.bk-role-page .page-header p,
+body.bk-role-page .dashboard-header p,
+body.bk-role-page .welcome-message p,
+body.bk-role-page .hero p,
+body.bk-role-page .claims-page-header p {
+  max-width: 48rem !important;
+  opacity: 0.88 !important;
+}
+
+body.bk-role-page .admin-panel,
+body.bk-role-page .section-card,
+body.bk-role-page .panel,
+body.bk-role-page .card,
+body.bk-role-page .stat-card,
+body.bk-role-page .metric-card,
+body.bk-role-page .ui-card,
+body.bk-role-page .filter-card,
+body.bk-role-page .profile-card,
+body.bk-role-page .security-notes,
+body.bk-role-page .contact-panel,
+body.bk-role-page .chat-panel,
+body.bk-role-page .claims-content,
+body.bk-role-page .table-shell,
+body.bk-role-page .table-container,
+body.bk-role-page .claims-table-container,
+body.bk-role-page .graph-container,
+body.bk-role-page .chart-container {
+  border: 1px solid rgb(var(--bk-border-rgb) / 0.95) !important;
+  border-radius: 1.25rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 16px 34px rgb(var(--bk-primary-rgb) / 0.08) !important;
+}
+
+body.bk-role-page .panel-head,
+body.bk-role-page .admin-panel-head,
+body.bk-role-page .section-head,
+body.bk-role-page .profile-card-head,
+body.bk-role-page .card-header,
+body.bk-role-page .contact-panel > header,
+body.bk-role-page .chat-header {
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  background: rgb(var(--bk-primary-rgb) / 0.045) !important;
+}
+
+body.bk-role-page table thead th,
+body.bk-role-page .table thead th,
+body.bk-role-page .claims-table thead th,
+body.bk-role-page .activity-table thead th,
+body.bk-role-page .dash-table thead th {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  border-right: 1px dotted rgb(255 255 255 / 0.46) !important;
+  border-bottom: 1px solid rgb(var(--bk-primary-rgb) / 0.86) !important;
+}
+
+body.bk-role-page table thead th *,
+body.bk-role-page .table thead th *,
+body.bk-role-page .claims-table thead th *,
+body.bk-role-page .activity-table thead th *,
+body.bk-role-page .dash-table thead th * {
+  color: #ffffff !important;
+}
+
+body.bk-role-page table tbody td,
+body.bk-role-page .table tbody td,
+body.bk-role-page .claims-table tbody td,
+body.bk-role-page .activity-table tbody td,
+body.bk-role-page .dash-table tbody td {
+  border-right: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.3) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page table tbody tr:nth-child(odd) td,
+body.bk-role-page .table tbody tr:nth-child(odd) td,
+body.bk-role-page .claims-table tbody tr:nth-child(odd) td,
+body.bk-role-page .activity-table tbody tr:nth-child(odd) td,
+body.bk-role-page .dash-table tbody tr:nth-child(odd) td {
+  background: rgb(var(--bk-primary-rgb) / 0.045) !important;
+}
+
+body.bk-role-page table tbody tr:nth-child(even) td,
+body.bk-role-page .table tbody tr:nth-child(even) td,
+body.bk-role-page .claims-table tbody tr:nth-child(even) td,
+body.bk-role-page .activity-table tbody tr:nth-child(even) td,
+body.bk-role-page .dash-table tbody tr:nth-child(even) td {
+  background: #ffffff !important;
+}
+
+body.bk-role-page table tbody tr:hover td,
+body.bk-role-page .table tbody tr:hover td,
+body.bk-role-page .claims-table tbody tr:hover td,
+body.bk-role-page .activity-table tbody tr:hover td,
+body.bk-role-page .dash-table tbody tr:hover td {
+  background: rgb(var(--bk-primary-rgb) / 0.09) !important;
+}
+
+body.bk-role-page .ui-input,
+body.bk-role-page .ui-select,
+body.bk-role-page .form-control,
+body.bk-role-page .form-input,
+body.bk-role-page .search-input,
+body.bk-role-page .filter-select,
+body.bk-role-page .message-input,
+body.bk-role-page input[type="text"],
+body.bk-role-page input[type="email"],
+body.bk-role-page input[type="password"],
+body.bk-role-page input[type="tel"],
+body.bk-role-page input[type="number"],
+body.bk-role-page input[type="date"],
+body.bk-role-page select,
+body.bk-role-page textarea {
+  border-color: rgb(var(--bk-border-rgb) / 0.95) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-page .dm-filter-bar {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.45rem !important;
+  margin-top: 0.65rem !important;
+}
+
+body.bk-role-page .dm-filter {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.22) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  min-height: 2rem !important;
+  padding: 0 0.72rem !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-page .dm-filter span {
+  display: inline-flex !important;
+  min-width: 1.3rem !important;
+  height: 1.3rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  background: rgb(var(--bk-primary-rgb) / 0.08) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.7rem !important;
+}
+
+body.bk-role-page .dm-filter.active {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .dm-filter.active span {
+  background: rgb(255 255 255 / 0.2) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .dm-open-indicator,
+body.bk-role-page .chat-channel-note {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.72rem !important;
+  font-weight: 750 !important;
+}
+
+body.bk-role-page .dm-open-indicator {
+  margin-top: 0.32rem !important;
+}
+
+body.bk-role-page .chat-channel-note {
+  margin: 0.18rem 0 0 !important;
+}
+
+body.bk-role-page .dm-open-indicator i,
+body.bk-role-page .chat-channel-note i {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .admin-hero .hero-mini,
+body.bk-role-page .legal-hero .hero-mini,
+body.bk-role-page .finance-hero .hero-mini,
+body.bk-role-page .dash-hero .metric-card,
+body.bk-role-page .admin-hero .metric-card,
+body.bk-role-page .legal-hero .metric-card,
+body.bk-role-page .finance-hero .metric-card,
+body.bk-role-page .admin-hero .stat-card,
+body.bk-role-page .legal-hero .stat-card,
+body.bk-role-page .finance-hero .stat-card {
+  border-color: rgb(255 255 255 / 0.34) !important;
+  background: rgb(255 255 255 / 0.14) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-page .admin-hero .hero-mini *,
+body.bk-role-page .legal-hero .hero-mini *,
+body.bk-role-page .finance-hero .hero-mini *,
+body.bk-role-page .dash-hero .metric-card *,
+body.bk-role-page .admin-hero .metric-card *,
+body.bk-role-page .legal-hero .metric-card *,
+body.bk-role-page .finance-hero .metric-card *,
+body.bk-role-page .admin-hero .stat-card *,
+body.bk-role-page .legal-hero .stat-card *,
+body.bk-role-page .finance-hero .stat-card * {
+  color: #ffffff !important;
+}
+
+body.bk-role-page .chat-hero p,
+body.bk-role-page .chat-hero p.text-bk-muted,
+body.bk-role-page .chat-hero .text-bk-muted {
+  color: #ffffff !important;
+  opacity: 0.9 !important;
+}
+
+body.bk-role-page .claims-page-header {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 0.85rem !important;
+}
+
+body.bk-role-page .claims-tools {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+}
+
+body.bk-role-page .claims-page-header .claims-tools .ui-btn {
+  border-color: rgb(255 255 255 / 0.58) !important;
+  background: rgb(255 255 255 / 0.14) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-page .claims-page-header .claims-tools .ui-btn * {
+  color: #ffffff !important;
+}
+
+body.bk-role-page .claims-page-header .claims-tools .ui-btn:hover {
+  background: #ffffff !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .claims-page-header .claims-tools .ui-btn:hover * {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-admin .claims-wrapper .claims-table thead th,
+body.bk-role-admin .claims-wrapper .claims-table th {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-right: 1px dotted rgb(255 255 255 / 0.46) !important;
+  border-bottom: 1px solid rgb(var(--bk-primary-rgb) / 0.86) !important;
+  color: #111827 !important;
+}
+
+body.bk-role-admin .claims-wrapper .claims-table thead th *,
+body.bk-role-admin .claims-wrapper .claims-table th *,
+body.bk-role-admin .claims-wrapper .claims-table th .table-entity-label,
+body.bk-role-admin .claims-wrapper .claims-table th .table-entity-label i {
+  color: #111827 !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-legal .claims-wrapper .claims-table thead th,
+body.bk-role-legal .claims-wrapper .claims-table th,
+body.bk-role-legal .claims-wrapper .claims-table thead th *,
+body.bk-role-legal .claims-wrapper .claims-table th *,
+body.bk-role-legal .claims-wrapper .claims-table th .table-entity-label,
+body.bk-role-legal .claims-wrapper .claims-table th .table-entity-label i {
+  color: #111827 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 900px) {
+  body.bk-role-page .admin-hero,
+  body.bk-role-page .dash-hero,
+  body.bk-role-page .claims-hero,
+  body.bk-role-page .finance-hero,
+  body.bk-role-page .legal-hero,
+  body.bk-role-page .profile-hero,
+  body.bk-role-page .chat-hero,
+  body.bk-role-page .page-header,
+  body.bk-role-page .dashboard-header,
+  body.bk-role-page .welcome-message,
+  body.bk-role-page .hero,
+  body.bk-role-page .claims-page-header {
+    border-radius: 1.1rem !important;
+    padding: 1rem !important;
+  }
+}
+
+/* Profile and Security redesign: one clear vertical security flow across every portal. */
+body.bk-role-page .profile-shell {
+  max-width: none !important;
+  padding: 1.15rem 1.15rem 2.4rem !important;
+}
+
+body.bk-role-page .profile-shell > .profile-hero,
+body.bk-role-page .profile-shell > .profile-grid,
+body.bk-role-page .profile-shell > .mt-4 {
+  width: min(100%, 820px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.bk-role-page .profile-hero {
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.42) !important;
+  border-radius: 1.35rem !important;
+  background:
+    linear-gradient(135deg, #034ea2 0%, #063f83 58%, #082b58 100%) !important;
+  box-shadow: 0 18px 34px rgb(var(--bk-primary-rgb) / 0.16) !important;
+  padding: 1.35rem 1.45rem !important;
+}
+
+body.bk-role-page .profile-hero::before {
+  display: none !important;
+}
+
+body.bk-role-page .profile-hero h1 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(1.85rem, 2.7vw, 2.45rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1.06 !important;
+}
+
+body.bk-role-page .profile-hero p {
+  max-width: 42rem !important;
+  margin-top: 0.55rem !important;
+  color: #ffffff !important;
+  opacity: 0.92 !important;
+  font-size: 0.96rem !important;
+}
+
+body.bk-role-page .profile-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0.85rem !important;
+  align-items: stretch !important;
+  margin-top: 0.95rem !important;
+}
+
+body.bk-role-page .profile-shell .settings-grid,
+body.bk-role-page .profile-shell form.settings-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0.85rem !important;
+}
+
+body.bk-role-page .profile-shell .settings-row {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0.85rem !important;
+}
+
+body.bk-role-page .profile-card,
+body.bk-role-page .security-notes {
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.22) !important;
+  border-radius: 1.2rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 14px 28px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  overflow: hidden !important;
+}
+
+body.bk-role-page .profile-card-head {
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.28) !important;
+  background:
+    linear-gradient(90deg, rgb(var(--bk-primary-rgb) / 0.1), #ffffff 78%) !important;
+  padding: 1rem 1.15rem !important;
+}
+
+body.bk-role-page .profile-card-title {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1.08rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+}
+
+body.bk-role-page .profile-card-subtitle {
+  margin-top: 0.25rem !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.86rem !important;
+  font-weight: 650 !important;
+}
+
+body.bk-role-page .profile-card-body {
+  padding: 1.1rem 1.15rem !important;
+}
+
+body.bk-role-page .profile-shell .ui-field {
+  display: grid !important;
+  gap: 0.42rem !important;
+}
+
+body.bk-role-page .profile-shell .ui-label {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+body.bk-role-page .profile-shell .ui-input {
+  min-height: 3.08rem !important;
+  border: 1.5px solid rgb(var(--bk-primary-rgb) / 0.28) !important;
+  border-radius: 0.9rem !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 500 !important;
+  box-shadow: inset 0 1px 0 rgb(var(--bk-primary-rgb) / 0.05) !important;
+}
+
+body.bk-role-page .profile-shell .ui-input::placeholder {
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-weight: 500 !important;
+  opacity: 0.82 !important;
+}
+
+body.bk-role-page .profile-shell .ui-input:focus {
+  border-color: rgb(var(--bk-primary-rgb)) !important;
+  box-shadow: 0 0 0 4px rgb(var(--bk-primary-rgb) / 0.14) !important;
+  outline: none !important;
+}
+
+body.bk-role-page .profile-shell .ui-input:disabled {
+  background: rgb(var(--bk-primary-rgb) / 0.035) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-page .profile-shell .password-wrap {
+  position: relative !important;
+}
+
+body.bk-role-page .profile-shell .password-wrap .ui-input {
+  padding-right: 3.15rem !important;
+}
+
+body.bk-role-page .profile-shell .pw-toggle {
+  right: 0.62rem !important;
+  width: 2.15rem !important;
+  height: 2.15rem !important;
+  border: 1px solid rgb(var(--bk-primary-rgb) / 0.18) !important;
+  border-radius: 0.72rem !important;
+  background: rgb(var(--bk-primary-rgb) / 0.06) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-page .profile-shell .pw-toggle:hover,
+body.bk-role-page .profile-shell .pw-toggle:focus {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  outline: none !important;
+}
+
+body.bk-role-page .profile-card-body.flex.justify-end {
+  display: grid !important;
+  justify-content: stretch !important;
+  padding: 0.95rem 1.15rem 1.1rem !important;
+}
+
+body.bk-role-page .profile-actions {
+  display: grid !important;
+  margin-top: 0.1rem !important;
+}
+
+body.bk-role-page .profile-card-body.flex.justify-end .ui-btn,
+body.bk-role-page .profile-actions .ui-btn,
+body.bk-role-page .profile-shell form.mt-4 .ui-btn {
+  width: 100% !important;
+  justify-content: center !important;
+  min-height: 3.08rem !important;
+  border-radius: 0.9rem !important;
+  font-weight: 900 !important;
+}
+
+body.bk-role-page .security-notes {
+  padding: 1.05rem 1.15rem !important;
+}
+
+body.bk-role-page .security-notes-head {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.85rem !important;
+}
+
+body.bk-role-page .security-icon {
+  display: inline-flex !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.9rem !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-page .security-notes h2 {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+}
+
+body.bk-role-page .security-notes p {
+  margin: 0.2rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.88rem !important;
+}
+
+body.bk-role-page .security-rule-list {
+  display: grid !important;
+  gap: 0.62rem !important;
+  list-style: none !important;
+  margin: 1rem 0 0 !important;
+  padding: 0 !important;
+}
+
+body.bk-role-page .security-rule-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.62rem !important;
+  border: 1px dotted rgb(var(--bk-primary-rgb) / 0.32) !important;
+  border-radius: 0.95rem !important;
+  background: rgb(var(--bk-primary-rgb) / 0.035) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.78rem 0.82rem !important;
+}
+
+body.bk-role-page .security-rule-list i {
+  color: rgb(var(--bk-primary-rgb)) !important;
+  margin-top: 0.12rem !important;
+}
+
+body.bk-role-page .security-rule-list span {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.88rem !important;
+  font-weight: 680 !important;
+  line-height: 1.45 !important;
+}
+
+body.bk-role-page .profile-shell .danger-text {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 650 !important;
+}
+
+body.bk-role-page .profile-shell .text-bk-danger {
+  color: #b91c1c !important;
+}
+
+@media (max-width: 900px) {
+  body.bk-role-page .profile-shell {
+    padding: 4rem 0.78rem 1.6rem !important;
+  }
+
+  body.bk-role-page .profile-hero,
+  body.bk-role-page .profile-card,
+  body.bk-role-page .security-notes {
+    border-radius: 1rem !important;
+  }
+
+  body.bk-role-page .profile-hero,
+  body.bk-role-page .profile-card-head,
+  body.bk-role-page .profile-card-body,
+  body.bk-role-page .security-notes {
+    padding-left: 0.95rem !important;
+    padding-right: 0.95rem !important;
+  }
+}
+
+/* Legal dashboard recent claims table: force the same BK data-grid finish used elsewhere. */
+body.bk-role-legal .legal-dashboard .table-wrap {
+  border: 1px dotted rgb(var(--bk-primary-rgb) / 0.42) !important;
+  border-radius: 1.05rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 14px 28px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  overflow-x: auto !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table thead th {
+  border-top: 0 !important;
+  border-right: 1px dotted rgb(255 255 255 / 0.44) !important;
+  border-bottom: 1px solid rgb(var(--bk-primary-rgb)) !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  padding: 0.78rem 0.85rem !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table thead th:last-child {
+  border-right: 0 !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table thead th *,
+body.bk-role-legal .legal-dashboard .legal-table thead th .table-entity-label,
+body.bk-role-legal .legal-dashboard .legal-table thead th .table-entity-label i {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table thead th .table-entity-label {
+  border-color: rgb(255 255 255 / 0.38) !important;
+  background: rgb(255 255 255 / 0.12) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table tbody td {
+  border-right: 1px dotted rgb(var(--bk-primary-rgb) / 0.3) !important;
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.34) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.8rem 0.85rem !important;
+  vertical-align: middle !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table tbody td:last-child {
+  border-right: 0 !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table tbody tr:nth-child(odd) td {
+  background: rgb(var(--bk-primary-rgb) / 0.045) !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table tbody tr:nth-child(even) td {
+  background: #ffffff !important;
+}
+
+body.bk-role-legal .legal-dashboard .legal-table tbody tr:hover td {
+  background: rgb(var(--bk-primary-rgb) / 0.09) !important;
+}
+
+/* Exact Legal-dashboard table treatment, now applied to every real portal data table. */
+body.bk-role-page .table-wrap:has(> .bk-table-shell),
+body.bk-role-page .table-shell:has(> .bk-table-shell) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+body.bk-role-page .bk-table-shell {
+  border: 1px dotted rgb(var(--bk-primary-rgb) / 0.42) !important;
+  border-radius: 1.05rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 14px 28px rgb(var(--bk-primary-rgb) / 0.08) !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 0 !important;
+}
+
+body.bk-role-page .bk-table-shell > table,
+body.bk-role-page .bk-table-shell > .table,
+body.bk-role-page .bk-table-shell > .claims-table,
+body.bk-role-page .bk-table-shell > .activity-table,
+body.bk-role-page .bk-table-shell > .data-table,
+body.bk-role-page .bk-table-shell > .finance-table,
+body.bk-role-page .bk-table-shell > .legal-table,
+body.bk-role-page .bk-table-shell > .dash-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-page .bk-table-shell > table thead th,
+body.bk-role-page .bk-table-shell > .table thead th,
+body.bk-role-page .bk-table-shell > .claims-table thead th,
+body.bk-role-page .bk-table-shell > .claims-table th,
+body.bk-role-page .bk-table-shell > .activity-table thead th,
+body.bk-role-page .bk-table-shell > .activity-table th,
+body.bk-role-page .bk-table-shell > .data-table thead th,
+body.bk-role-page .bk-table-shell > .finance-table thead th,
+body.bk-role-page .bk-table-shell > .finance-table th,
+body.bk-role-page .bk-table-shell > .legal-table thead th,
+body.bk-role-page .bk-table-shell > .legal-table th,
+body.bk-role-page .bk-table-shell > .dash-table thead th,
+body.bk-role-page .bk-table-shell > .dash-table th {
+  border-top: 0 !important;
+  border-right: 1px dotted rgb(255 255 255 / 0.44) !important;
+  border-bottom: 1px solid rgb(var(--bk-primary-rgb)) !important;
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  padding: 0.78rem 0.85rem !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  vertical-align: middle !important;
+}
+
+body.bk-role-page .bk-table-shell > table thead th:last-child,
+body.bk-role-page .bk-table-shell > .table thead th:last-child,
+body.bk-role-page .bk-table-shell > .claims-table thead th:last-child,
+body.bk-role-page .bk-table-shell > .claims-table th:last-child,
+body.bk-role-page .bk-table-shell > .activity-table thead th:last-child,
+body.bk-role-page .bk-table-shell > .activity-table th:last-child,
+body.bk-role-page .bk-table-shell > .data-table thead th:last-child,
+body.bk-role-page .bk-table-shell > .finance-table thead th:last-child,
+body.bk-role-page .bk-table-shell > .finance-table th:last-child,
+body.bk-role-page .bk-table-shell > .legal-table thead th:last-child,
+body.bk-role-page .bk-table-shell > .legal-table th:last-child,
+body.bk-role-page .bk-table-shell > .dash-table thead th:last-child,
+body.bk-role-page .bk-table-shell > .dash-table th:last-child {
+  border-right: 0 !important;
+}
+
+body.bk-role-page .bk-table-shell > table thead th *,
+body.bk-role-page .bk-table-shell > .table thead th *,
+body.bk-role-page .bk-table-shell > .claims-table thead th *,
+body.bk-role-page .bk-table-shell > .claims-table th *,
+body.bk-role-page .bk-table-shell > .activity-table thead th *,
+body.bk-role-page .bk-table-shell > .activity-table th *,
+body.bk-role-page .bk-table-shell > .data-table thead th *,
+body.bk-role-page .bk-table-shell > .finance-table thead th *,
+body.bk-role-page .bk-table-shell > .finance-table th *,
+body.bk-role-page .bk-table-shell > .legal-table thead th *,
+body.bk-role-page .bk-table-shell > .legal-table th *,
+body.bk-role-page .bk-table-shell > .dash-table thead th *,
+body.bk-role-page .bk-table-shell > .dash-table th * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-page .bk-table-shell > table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .claims-table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .claims-table th .table-entity-label,
+body.bk-role-page .bk-table-shell > .activity-table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .activity-table th .table-entity-label,
+body.bk-role-page .bk-table-shell > .data-table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .finance-table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .finance-table th .table-entity-label,
+body.bk-role-page .bk-table-shell > .legal-table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .legal-table th .table-entity-label,
+body.bk-role-page .bk-table-shell > .dash-table thead th .table-entity-label,
+body.bk-role-page .bk-table-shell > .dash-table th .table-entity-label {
+  border-color: rgb(255 255 255 / 0.38) !important;
+  background: rgb(255 255 255 / 0.12) !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-page .bk-table-shell > table tbody td,
+body.bk-role-page .bk-table-shell > table tbody th,
+body.bk-role-page .bk-table-shell > .table tbody td,
+body.bk-role-page .bk-table-shell > .table tbody th,
+body.bk-role-page .bk-table-shell > .claims-table tbody td,
+body.bk-role-page .bk-table-shell > .claims-table tbody th,
+body.bk-role-page .bk-table-shell > .activity-table tbody td,
+body.bk-role-page .bk-table-shell > .activity-table tbody th,
+body.bk-role-page .bk-table-shell > .data-table tbody td,
+body.bk-role-page .bk-table-shell > .data-table tbody th,
+body.bk-role-page .bk-table-shell > .finance-table tbody td,
+body.bk-role-page .bk-table-shell > .finance-table tbody th,
+body.bk-role-page .bk-table-shell > .legal-table tbody td,
+body.bk-role-page .bk-table-shell > .legal-table tbody th,
+body.bk-role-page .bk-table-shell > .dash-table tbody td,
+body.bk-role-page .bk-table-shell > .dash-table tbody th {
+  border-right: 1px dotted rgb(var(--bk-primary-rgb) / 0.3) !important;
+  border-bottom: 1px dotted rgb(var(--bk-primary-rgb) / 0.34) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  padding: 0.8rem 0.85rem !important;
+  vertical-align: middle !important;
+  background-clip: padding-box !important;
+}
+
+body.bk-role-page .bk-table-shell > table tbody td:last-child,
+body.bk-role-page .bk-table-shell > table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .claims-table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .claims-table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .activity-table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .activity-table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .data-table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .data-table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .finance-table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .finance-table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .legal-table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .legal-table tbody th:last-child,
+body.bk-role-page .bk-table-shell > .dash-table tbody td:last-child,
+body.bk-role-page .bk-table-shell > .dash-table tbody th:last-child {
+  border-right: 0 !important;
+}
+
+body.bk-role-page .bk-table-shell > table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .claims-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .activity-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .data-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .finance-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .legal-table tbody tr:nth-child(odd) > *,
+body.bk-role-page .bk-table-shell > .dash-table tbody tr:nth-child(odd) > * {
+  background: rgb(var(--bk-primary-rgb) / 0.045) !important;
+}
+
+body.bk-role-page .bk-table-shell > table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .claims-table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .activity-table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .data-table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .finance-table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .legal-table tbody tr:nth-child(even) > *,
+body.bk-role-page .bk-table-shell > .dash-table tbody tr:nth-child(even) > * {
+  background: #ffffff !important;
+}
+
+body.bk-role-page .bk-table-shell > table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .table-hover tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .claims-table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .activity-table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .data-table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .finance-table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .legal-table tbody tr:hover > *,
+body.bk-role-page .bk-table-shell > .dash-table tbody tr:hover > * {
+  background: rgb(var(--bk-primary-rgb) / 0.09) !important;
+}
+
+/* Legal Claims Review header text must stay white on the BK-blue table header. */
+body.bk-role-legal .claims-wrapper .bk-table-shell > .claims-table thead th,
+body.bk-role-legal .claims-wrapper .bk-table-shell > .claims-table thead th *,
+body.bk-role-legal .claims-wrapper .bk-table-shell > .claims-table thead th .table-entity-label,
+body.bk-role-legal .claims-wrapper .bk-table-shell > .claims-table thead th .table-entity-label i {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Claimant My Claims hero copy and stat labels stay white on the blue header. */
+body.bk-role-claimant .claims-shell .claims-hero h1,
+body.bk-role-claimant .claims-shell .claims-hero p,
+body.bk-role-claimant .claims-shell .claims-hero .stat-chip p,
+body.bk-role-claimant .claims-shell .claims-hero .stat-chip .text-bk-muted,
+body.bk-role-claimant .claims-shell .claims-hero .stat-chip .text-bk-text,
+body.bk-role-claimant .claims-shell .claims-hero .stat-chip .text-bk-warning,
+body.bk-role-claimant .claims-shell .claims-hero .stat-chip .text-bk-primary,
+body.bk-role-claimant .claims-shell .claims-hero .stat-chip .text-bk-success {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-claimant .claims-shell .claims-hero .claims-page-header p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+body.bk-role-claimant #toast.toast {
+  top: 1rem !important;
+  right: 1rem !important;
+  min-width: 360px !important;
+  max-width: 460px !important;
+  padding: 0.95rem 1rem 1.05rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.88) !important;
+  border-left-width: 0 !important;
+  border-radius: 1rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 16px 36px rgba(16, 24, 40, 0.14) !important;
+}
+
+body.bk-role-claimant #toast.toast.success {
+  background: linear-gradient(180deg, rgba(var(--bk-success-rgb), 0.08), #ffffff 78%) !important;
+  border-color: rgba(var(--bk-success-rgb), 0.24) !important;
+}
+
+body.bk-role-claimant #toast.toast.error {
+  background: linear-gradient(180deg, rgba(var(--bk-danger-rgb), 0.08), #ffffff 78%) !important;
+  border-color: rgba(var(--bk-danger-rgb), 0.24) !important;
+}
+
+body.bk-role-claimant #toast.toast.warning {
+  background: linear-gradient(180deg, rgba(var(--bk-warning-rgb), 0.1), #ffffff 78%) !important;
+  border-color: rgba(var(--bk-warning-rgb), 0.24) !important;
+}
+
+body.bk-role-claimant #toast.toast.info {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.08), #ffffff 78%) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.22) !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-content {
+  align-items: flex-start !important;
+  gap: 0.8rem !important;
+}
+
+body.bk-role-claimant #toast.toast #toast-icon {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 0.9rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.1) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  flex-shrink: 0 !important;
+}
+
+body.bk-role-claimant #toast.toast.success #toast-icon {
+  background: rgba(var(--bk-success-rgb), 0.12) !important;
+  color: rgb(var(--bk-success-rgb)) !important;
+}
+
+body.bk-role-claimant #toast.toast.error #toast-icon {
+  background: rgba(var(--bk-danger-rgb), 0.12) !important;
+  color: rgb(var(--bk-danger-rgb)) !important;
+}
+
+body.bk-role-claimant #toast.toast.warning #toast-icon {
+  background: rgba(var(--bk-warning-rgb), 0.14) !important;
+  color: rgb(var(--bk-warning-rgb)) !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-title {
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-text {
+  margin-top: 0.18rem !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.87rem !important;
+  line-height: 1.58 !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-note {
+  display: block !important;
+  margin-top: 0.35rem !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-action-btn {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-action-btn:hover {
+  background: rgba(var(--bk-primary-rgb), 0.08) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-claimant #toast.toast .toast-progress {
+  height: 4px !important;
+  border-radius: 0 0 1rem 1rem !important;
+}
+
+/* Claimant submit claim page: stronger BK shell, clearer form controls, and a cleaner workspace layout. */
+body.bk-role-claimant .submit-claim-page {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page > .page-header.submit-hero {
+  display: block !important;
+  padding: 1.2rem 1.35rem !important;
+  border: none !important;
+  border-radius: 1.15rem !important;
+  background: linear-gradient(135deg, rgb(var(--bk-primary-rgb)) 0%, rgba(3, 78, 162, 0.96) 100%) !important;
+  box-shadow: 0 16px 36px rgba(3, 78, 162, 0.18) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  min-width: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero-eyebrow {
+  display: none !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero h1,
+body.bk-role-claimant .submit-claim-page .submit-hero h1 i,
+body.bk-role-claimant .submit-claim-page .submit-hero p {
+  color: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero h1 {
+  margin: 0 !important;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem) !important;
+  line-height: 1.1 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero p {
+  margin: 0 !important;
+  max-width: 52rem !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.55 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero-meta {
+  display: none !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-hero-pill {
+  display: none !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-workspace {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px) !important;
+  gap: 1rem !important;
+  align-items: start !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-primary {
+  min-width: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-shell {
+  overflow: hidden !important;
+  border-radius: 1.05rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.96) !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.06) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-progress {
+  padding: 0.95rem 1.05rem !important;
+  background: rgb(var(--bk-surface-rgb)) !important;
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .progress-steps {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0.8rem !important;
+  align-items: stretch !important;
+  position: relative !important;
+}
+
+body.bk-role-claimant .submit-claim-page .progress-steps .progress-bar {
+  top: 21px !important;
+  left: 16% !important;
+  width: 68% !important;
+  height: 4px !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step {
+  min-height: 82px !important;
+  padding: 0.72rem 0.68rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  border-radius: 0.95rem !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step.active {
+  background: rgba(var(--bk-primary-rgb), 0.06) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.28) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step.completed {
+  background: rgba(var(--bk-success-rgb), 0.08) !important;
+  border-color: rgba(var(--bk-success-rgb), 0.24) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step-circle {
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 auto 0.62rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step-label {
+  display: block !important;
+  text-align: center !important;
+  font-size: 0.84rem !important;
+  line-height: 1.35 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-section {
+  padding: 1.1rem 1.2rem 1.2rem !important;
+  background: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .section-header {
+  margin-bottom: 1rem !important;
+  padding: 0 0 0.85rem !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(var(--bk-primary-rgb), 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body.bk-role-claimant .submit-claim-page .section-kicker {
+  display: none !important;
+}
+
+body.bk-role-claimant .submit-claim-page .section-header h2 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  margin: 0 !important;
+  font-size: 1.06rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .section-header p {
+  margin: 0.38rem 0 0 !important;
+  max-width: 44rem !important;
+  color: rgba(var(--bk-text-rgb), 0.82) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.52 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.45rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-group.full-width {
+  grid-column: 1 / -1 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.32rem !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 700 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-input,
+body.bk-role-claimant .submit-claim-page select.form-input,
+body.bk-role-claimant .submit-claim-page textarea.form-input,
+body.bk-role-claimant .submit-claim-page input[type="text"],
+body.bk-role-claimant .submit-claim-page input[type="email"],
+body.bk-role-claimant .submit-claim-page input[type="date"],
+body.bk-role-claimant .submit-claim-page textarea,
+body.bk-role-claimant .submit-claim-page select {
+  min-height: 3.15rem !important;
+  padding: 0.9rem 1rem !important;
+  border: 1.5px solid rgba(var(--bk-primary-rgb), 0.22) !important;
+  border-radius: 0.82rem !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.94), 0 2px 8px rgba(16, 24, 40, 0.05) !important;
+}
+
+body.bk-role-claimant .submit-claim-page textarea.form-input,
+body.bk-role-claimant .submit-claim-page textarea {
+  min-height: 132px !important;
+  resize: vertical !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-input::placeholder,
+body.bk-role-claimant .submit-claim-page textarea::placeholder {
+  color: rgba(var(--bk-text-rgb), 0.56) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-input:hover,
+body.bk-role-claimant .submit-claim-page textarea:hover,
+body.bk-role-claimant .submit-claim-page select:hover {
+  border-color: rgba(var(--bk-primary-rgb), 0.46) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0.65rem !important;
+  padding: 0.9rem !important;
+  margin-bottom: 1rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.85) !important;
+  border-radius: 0.95rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.5) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source-title {
+  grid-column: 1 / -1 !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source-line {
+  margin: 0 !important;
+  padding: 0.75rem 0.82rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  border-radius: 0.9rem !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source-key {
+  display: block !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source-value {
+  display: block !important;
+  margin-top: 0.22rem !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-inline-hint {
+  margin: -0.1rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.45 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .relationship-critical {
+  margin: 0 0 1rem !important;
+  padding: 0.95rem 1rem !important;
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.2) !important;
+  border-radius: 0.95rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.05) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .relationship-critical-head {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  margin-bottom: 0.72rem !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .relationship-critical-note {
+  margin: 0.45rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.5 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-options {
+  display: grid !important;
+  gap: 0.85rem !important;
+  margin-top: 0.8rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category {
+  padding: 0.9rem !important;
+  border-radius: 0.95rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.45) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category h5 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  margin: 0 0 0.8rem !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category > div {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.75rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category label {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.6rem !important;
+  min-height: 56px !important;
+  padding: 0.72rem 0.78rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.78) !important;
+  border-radius: 0.74rem !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease, background 180ms ease !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category label:hover {
+  border-color: rgba(var(--bk-primary-rgb), 0.34) !important;
+  transform: translateY(-1px) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category label:has(input:checked) {
+  border-color: rgba(var(--bk-primary-rgb), 0.72) !important;
+  background: rgba(var(--bk-primary-rgb), 0.08) !important;
+  box-shadow: 0 10px 20px rgba(3, 78, 162, 0.11) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category label input {
+  margin-top: 0.12rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-details-panel {
+  padding: 0.92rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.84) !important;
+  border-radius: 1rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.4) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-fields-grid {
+  gap: 0.9rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-grid .form-group {
+  padding: 0.92rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  border-radius: 0.95rem !important;
+  background: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-grid .docs-span-full {
+  grid-column: 1 / -1 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .file-upload-area {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 0.55rem !important;
+  min-height: 176px !important;
+  padding: 0.95rem !important;
+  text-align: left !important;
+}
+
+body.bk-role-claimant .submit-claim-page .upload-icon {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 0.95rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.12) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .file-upload-area h4 {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .file-upload-area p {
+  margin: 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.83rem !important;
+  line-height: 1.52 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .summary-section {
+  display: grid !important;
+  gap: 0.9rem !important;
+  padding: 0.95rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.38) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .summary-section h3 {
+  margin: 0 !important;
+  padding: 0 0 0.8rem !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(var(--bk-primary-rgb), 0.14) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .summary-section h4 {
+  margin: 0 !important;
+  padding: 0.7rem 0.8rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  border-radius: 0.82rem !important;
+  background: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .summary-item {
+  display: grid !important;
+  grid-template-columns: minmax(180px, 0.9fr) minmax(0, 1.1fr) !important;
+  gap: 0.75rem !important;
+  align-items: start !important;
+  padding: 0.76rem 0.2rem !important;
+  border-bottom: 1px dotted rgba(var(--bk-border-rgb), 1) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .summary-label {
+  font-weight: 700 !important;
+}
+
+body.bk-role-claimant .submit-claim-page #section4 .form-group.full-width > .form-label {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.7rem !important;
+  width: 100% !important;
+  padding: 0.95rem 1rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.85) !important;
+  border-radius: 0.95rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.68) !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-navigation {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.8rem !important;
+  padding: 0.95rem 1.15rem 1.05rem !important;
+  background: #ffffff !important;
+  border-top: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-btn {
+  min-height: 3rem !important;
+  padding: 0 1.15rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .btn-next,
+body.bk-role-claimant .submit-claim-page .btn-submit {
+  box-shadow: 0 14px 28px rgba(var(--bk-primary-rgb), 0.18) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-flow-board {
+  display: grid !important;
+  gap: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-flow-grid {
+  display: grid !important;
+  grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr) !important;
+  gap: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.9) !important;
+  border-radius: 1.1rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 14px 28px rgba(3, 78, 162, 0.07) !important;
+  padding: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-primary {
+  background:
+    linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.04) 0%, rgba(255, 255, 255, 0.98) 28%),
+    #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .case-details-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 0.85rem !important;
+  margin-bottom: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-secondary,
+body.bk-role-claimant .submit-claim-page .claim-pane-notes {
+  background:
+    linear-gradient(180deg, rgba(var(--bk-bg-rgb), 0.72) 0%, rgba(255, 255, 255, 0.98) 24%),
+    #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-settlement {
+  background:
+    linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.05) 0%, rgba(255, 255, 255, 0.98) 24%),
+    #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-head {
+  display: grid !important;
+  grid-template-columns: 56px minmax(0, 1fr) !important;
+  gap: 0.8rem !important;
+  align-items: start !important;
+  margin-bottom: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-index {
+  display: inline-grid !important;
+  place-items: center !important;
+  min-height: 3rem !important;
+  padding: 0.45rem 0.7rem !important;
+  border-radius: 1rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.1) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-head h3 {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-head p {
+  margin: 0.26rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.55 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-head.claim-pane-head-no-badge {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane .form-grid:last-child,
+body.bk-role-claimant .submit-claim-page .claim-pane .form-group:last-child {
+  margin-bottom: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane .account-source,
+body.bk-role-claimant .submit-claim-page .claim-pane .relationship-critical {
+  margin-top: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-stage-brief {
+  margin-bottom: 1rem !important;
+  padding: 0.95rem 1rem !important;
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.16) !important;
+  border-radius: 1rem !important;
+  background: linear-gradient(135deg, rgba(var(--bk-primary-rgb), 0.08) 0%, rgba(255, 255, 255, 0.96) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-stage-copy strong {
+  display: block !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.92rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-stage-copy p {
+  margin: 0.28rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.55 !important;
+}
+
+body.bk-role-claimant .submit-claim-page > .page-header.submit-hero {
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 34%),
+    linear-gradient(135deg, rgb(var(--bk-primary-rgb)) 0%, rgba(2, 60, 128, 0.98) 100%) !important;
+  box-shadow: 0 20px 40px rgba(3, 78, 162, 0.22) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submit-shell {
+  border-color: rgba(var(--bk-primary-rgb), 0.16) !important;
+  box-shadow: 0 16px 32px rgba(3, 78, 162, 0.08) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-progress {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.08) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+  border-bottom-color: rgba(var(--bk-primary-rgb), 0.16) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .progress-steps .progress-bar {
+  border-radius: 999px !important;
+  background: rgba(var(--bk-primary-rgb), 0.14) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step {
+  border-color: rgba(var(--bk-primary-rgb), 0.16) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.03) 0%, rgba(255, 255, 255, 1) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step.active {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.16) 0%, rgba(255, 255, 255, 1) 100%) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.38) !important;
+  box-shadow: 0 10px 20px rgba(3, 78, 162, 0.1) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step.completed {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.12) 0%, rgba(255, 255, 255, 1) 100%) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.3) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step-circle {
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.18) !important;
+  background: rgba(var(--bk-primary-rgb), 0.08) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step.active .step-circle,
+body.bk-role-claimant .submit-claim-page .step.completed .step-circle {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.9) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .step.active .step-label,
+body.bk-role-claimant .submit-claim-page .step.completed .step-label {
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .section-header {
+  border-bottom-color: rgba(var(--bk-primary-rgb), 0.2) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .section-header h2 {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .form-input,
+body.bk-role-claimant .submit-claim-page select.form-input,
+body.bk-role-claimant .submit-claim-page textarea.form-input,
+body.bk-role-claimant .submit-claim-page input[type="text"],
+body.bk-role-claimant .submit-claim-page input[type="email"],
+body.bk-role-claimant .submit-claim-page input[type="date"],
+body.bk-role-claimant .submit-claim-page textarea,
+body.bk-role-claimant .submit-claim-page select {
+  border-color: rgba(var(--bk-primary-rgb), 0.28) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.02) 0%, #ffffff 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  border-color: rgba(var(--bk-primary-rgb), 0.16) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.08) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source-line {
+  border-color: rgba(var(--bk-primary-rgb), 0.14) !important;
+  box-shadow: inset 3px 0 0 rgba(var(--bk-primary-rgb), 0.18) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .account-source-line:first-of-type {
+  grid-column: 1 / -1 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .relationship-critical {
+  border-color: rgba(var(--bk-primary-rgb), 0.28) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.1) 0%, rgba(255, 255, 255, 0.96) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category {
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.16) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.07) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-category h5 {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .distribution-details-panel {
+  border-color: rgba(var(--bk-primary-rgb), 0.18) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.08) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-grid .form-group {
+  border-color: rgba(var(--bk-primary-rgb), 0.18) !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.05) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .file-upload-area {
+  border: 1px dashed rgba(var(--bk-primary-rgb), 0.28) !important;
+  border-radius: 1rem !important;
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.07) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .file-upload-area:hover {
+  border-color: rgba(var(--bk-primary-rgb), 0.46) !important;
+  box-shadow: 0 12px 24px rgba(3, 78, 162, 0.08) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .upload-icon {
+  background: rgba(var(--bk-primary-rgb), 0.16) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .upload-button {
+  background: rgb(var(--bk-primary-rgb)) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.92) !important;
+  box-shadow: 0 10px 18px rgba(3, 78, 162, 0.16) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .upload-button:hover {
+  background: rgba(2, 60, 128, 0.98) !important;
+  border-color: rgba(2, 60, 128, 0.98) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane {
+  position: relative !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  border-radius: 1.1rem 1.1rem 0 0 !important;
+  background: linear-gradient(90deg, rgba(2, 60, 128, 0.96) 0%, rgb(var(--bk-primary-rgb)) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-primary {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.08) 0%, rgba(255, 255, 255, 0.98) 32%), #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-secondary,
+body.bk-role-claimant .submit-claim-page .claim-pane-notes {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.06) 0%, rgba(255, 255, 255, 0.98) 28%), #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-settlement {
+  background: linear-gradient(180deg, rgba(var(--bk-primary-rgb), 0.09) 0%, rgba(255, 255, 255, 0.98) 28%), #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-index {
+  background: linear-gradient(135deg, rgb(var(--bk-primary-rgb)) 0%, rgba(2, 60, 128, 0.98) 100%) !important;
+  color: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-pane-head h3 {
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .docs-stage-brief {
+  border-color: rgba(var(--bk-primary-rgb), 0.24) !important;
+  background: linear-gradient(135deg, rgba(var(--bk-primary-rgb), 0.13) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submission-support.submit-support {
+  position: sticky !important;
+  top: 1rem !important;
+  display: grid !important;
+  gap: 0.85rem !important;
+  align-self: start !important;
+  margin: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-guide-card {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.88) !important;
+  border-radius: 0.95rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(3, 78, 162, 0.07) !important;
+  padding: 0.95rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-side-head h3 {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.98rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-side-head p {
+  margin: 0.28rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.5 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-guide-status {
+  margin-top: 0.85rem !important;
+  padding: 0.82rem 0.88rem !important;
+  border: 1px solid rgba(var(--bk-primary-rgb), 0.18) !important;
+  border-radius: 0.9rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.05) !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.86rem !important;
+  font-weight: 600 !important;
+  line-height: 1.55 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-list {
+  display: grid !important;
+  gap: 0.72rem !important;
+  margin-top: 0.85rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-item {
+  display: grid !important;
+  grid-template-columns: 36px minmax(0, 1fr) !important;
+  gap: 0.72rem !important;
+  align-items: start !important;
+  padding: 0.78rem 0.82rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  border-radius: 0.88rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.42) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-marker {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 0.85rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.08) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-item strong {
+  display: block !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-item p {
+  margin: 0.18rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.79rem !important;
+  line-height: 1.45 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-item.is-done {
+  border-color: rgba(var(--bk-success-rgb), 0.24) !important;
+  background: rgba(var(--bk-success-rgb), 0.06) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-item.is-done .claim-mini-marker {
+  background: rgba(var(--bk-success-rgb), 0.12) !important;
+  color: rgb(var(--bk-success-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-mini-item.is-active {
+  border-color: rgba(var(--bk-primary-rgb), 0.24) !important;
+  background: rgba(var(--bk-primary-rgb), 0.06) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-list {
+  list-style: none !important;
+  margin: 0.85rem 0 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  gap: 0.7rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-item {
+  display: grid !important;
+  grid-template-columns: 22px minmax(0, 1fr) !important;
+  gap: 0.72rem !important;
+  align-items: start !important;
+  padding: 0.75rem 0.78rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  border-radius: 0.88rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.38) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-item.done {
+  border-color: rgba(var(--bk-success-rgb), 0.24) !important;
+  background: rgba(var(--bk-success-rgb), 0.06) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-item.pending {
+  border-color: rgba(var(--bk-warning-rgb), 0.2) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
+  margin-top: 0.15rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-item.done .claim-required-docs-icon {
+  color: rgb(var(--bk-success-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-copy strong {
+  display: block !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .claim-required-docs-copy span,
+body.bk-role-claimant .submit-claim-page .claim-required-docs-empty {
+  display: block !important;
+  margin-top: 0.16rem !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.79rem !important;
+  line-height: 1.45 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .submission-support.submit-support .ocr-info {
+  margin-bottom: 0 !important;
+  padding: 0.95rem !important;
+  border-radius: 0.95rem !important;
+  background: #ffffff !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-panel {
+  border: 1px solid rgba(var(--bk-border-rgb), 0.88) !important;
+  border-radius: 0.95rem !important;
+  background: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(3, 78, 162, 0.08) !important;
+  overflow: hidden !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.9rem !important;
+  padding: 0.88rem 0.95rem !important;
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 0.82) !important;
+  background: linear-gradient(135deg, rgba(var(--bk-bg-rgb), 0.82) 0%, rgba(255, 255, 255, 0.96) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-head h3 {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 1rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-sub {
+  margin: 0.25rem 0 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-head-actions {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-count {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 2rem !important;
+  padding: 0.28rem 0.68rem !important;
+  border-radius: 999px !important;
+  background: rgba(var(--bk-primary-rgb), 0.09) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-clear {
+  min-height: 2rem !important;
+  padding: 0.35rem 0.8rem !important;
+  border-radius: 0.8rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.88) !important;
+  background: #ffffff !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-weight: 700 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight {
+  padding: 0.95rem !important;
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 0.78) !important;
+  background: linear-gradient(135deg, rgba(var(--bk-primary-rgb), 0.11) 0%, rgba(var(--bk-primary-rgb), 0.04) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight.success {
+  background: linear-gradient(135deg, rgba(var(--bk-success-rgb), 0.12) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight.error {
+  background: linear-gradient(135deg, rgba(var(--bk-danger-rgb), 0.12) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight.warning {
+  background: linear-gradient(135deg, rgba(var(--bk-warning-rgb), 0.12) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight-label {
+  display: inline-block !important;
+  margin-bottom: 0.42rem !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight-title {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.96rem !important;
+  font-weight: 800 !important;
+  line-height: 1.45 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-spotlight-text {
+  margin: 0.28rem 0 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
+  white-space: pre-line !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-list {
+  max-height: 28rem !important;
+  padding: 0.9rem !important;
+  display: grid !important;
+  gap: 0.72rem !important;
+  background: rgba(var(--bk-bg-rgb), 0.28) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-item {
+  display: grid !important;
+  gap: 0.62rem !important;
+  padding: 0.88rem 0.92rem !important;
+  border: 1px solid rgba(var(--bk-border-rgb), 0.84) !important;
+  border-radius: 0.88rem !important;
+  background: #ffffff !important;
+  border-left: 4px solid rgba(var(--bk-primary-rgb), 0.32) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-item:last-child {
+  border-bottom: 1px solid rgba(var(--bk-border-rgb), 0.84) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-item.success {
+  border-color: rgba(var(--bk-success-rgb), 0.24) !important;
+  background: rgba(var(--bk-success-rgb), 0.05) !important;
+  border-left-color: rgba(var(--bk-success-rgb), 0.9) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-item.error {
+  border-color: rgba(var(--bk-danger-rgb), 0.24) !important;
+  background: rgba(var(--bk-danger-rgb), 0.05) !important;
+  border-left-color: rgba(var(--bk-danger-rgb), 0.9) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-item.warning {
+  border-color: rgba(var(--bk-warning-rgb), 0.22) !important;
+  background: rgba(var(--bk-warning-rgb), 0.06) !important;
+  border-left-color: rgba(var(--bk-warning-rgb), 0.9) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-item.empty {
+  display: block !important;
+  padding: 1rem !important;
+  border-left-color: rgba(var(--bk-primary-rgb), 0.28) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-topline {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 0.8rem !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-heading {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.62rem !important;
+  min-width: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-icon {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 0.82rem !important;
+  background: rgba(var(--bk-primary-rgb), 0.1) !important;
+  color: rgb(var(--bk-primary-rgb)) !important;
+  flex-shrink: 0 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-icon.success {
+  background: rgba(var(--bk-success-rgb), 0.12) !important;
+  color: rgb(var(--bk-success-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-icon.error {
+  background: rgba(var(--bk-danger-rgb), 0.12) !important;
+  color: rgb(var(--bk-danger-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-icon.warning {
+  background: rgba(var(--bk-warning-rgb), 0.12) !important;
+  color: rgb(var(--bk-warning-rgb)) !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-title {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.9rem !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-badge {
+  flex-shrink: 0 !important;
+  padding: 0.24rem 0.55rem !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.01em !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-text {
+  margin: 0 !important;
+  color: rgb(var(--bk-text-rgb)) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+  white-space: pre-line !important;
+  overflow-wrap: anywhere !important;
+}
+
+body.bk-role-claimant .submit-claim-page .ocr-feedback-time {
+  margin: 0 !important;
+  color: rgb(var(--bk-muted-rgb)) !important;
+  font-size: 0.76rem !important;
+  line-height: 1.35 !important;
+}
+
+@media (max-width: 991.98px) {
+  body.bk-role-claimant .submit-claim-page > .page-header.submit-hero,
+  body.bk-role-claimant .submit-claim-page .submit-workspace,
+  body.bk-role-claimant .submit-claim-page .claim-flow-grid,
+  body.bk-role-claimant .submit-claim-page .form-grid,
+  body.bk-role-claimant .submit-claim-page .docs-grid,
+  body.bk-role-claimant .submit-claim-page .distribution-category > div,
+  body.bk-role-claimant .submit-claim-page .account-source {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .submit-hero-meta {
+    justify-content: flex-start !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .submission-support.submit-support {
+    position: static !important;
+  }
+
+  body.bk-role-claimant #toast.toast {
+    left: 1rem !important;
+    right: 1rem !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .progress-steps {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .progress-steps .progress-bar {
+    display: none !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .summary-item {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.35rem !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .form-navigation {
+    flex-wrap: wrap !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .form-navigation .form-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .ocr-feedback-topline {
+    flex-direction: column !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .claim-pane-head,
+  body.bk-role-claimant .submit-claim-page .ocr-feedback-head {
+    grid-template-columns: minmax(0, 1fr) !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .ocr-feedback-head-actions {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.bk-role-claimant .submit-claim-page > .page-header.submit-hero {
+    padding: 1.05rem !important;
+  }
+
+  body.bk-role-claimant .submit-claim-page .form-section,
+  body.bk-role-claimant .submit-claim-page .form-progress,
+  body.bk-role-claimant .submit-claim-page .form-navigation {
+    padding-left: 0.95rem !important;
+    padding-right: 0.95rem !important;
+  }
+}

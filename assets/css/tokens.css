@@ -1,0 +1,42 @@
+:root {
+  --bk-primary: #034ea2;
+  --bk-bg: #e1ebf8;
+  --bk-surface: #eff5fc;
+  --bk-text: #111827;
+  --bk-muted: #4b5563;
+  --radius: 0.875rem;
+  --shadow: 0 14px 34px rgba(3, 78, 162, 0.11);
+
+  --bk-primary-rgb: 3 78 162;
+  --bk-bg-rgb: 225 235 248;
+  --bk-surface-rgb: 239 245 252;
+  --bk-white-rgb: 255 255 255;
+  --bk-text-rgb: 17 24 39;
+  --bk-muted-rgb: 75 85 99;
+  --bk-border-rgb: 167 186 215;
+  --bk-ring-rgb: 3 78 162;
+  --bk-success-rgb: 22 101 52;
+  --bk-warning-rgb: 180 83 9;
+  --bk-danger-rgb: 180 35 24;
+
+  --app-font: "Sofia Pro", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --app-display-font: "Bicyclette", "Sora", "Inter", system-ui, sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --focus-ring: 0 0 0 3px rgba(3, 78, 162, 0.24);
+  --shadow-soft: 0 10px 26px rgba(3, 78, 162, 0.07);
+  --shadow-glow: 0 0 0 1px rgba(3, 78, 162, 0.12), 0 18px 40px rgba(3, 78, 162, 0.12);
+  --mesh-gradient:
+    radial-gradient(circle at 10% 14%, rgba(3, 78, 162, 0.08), transparent 44%),
+    radial-gradient(circle at 92% 4%, rgba(3, 78, 162, 0.055), transparent 38%),
+    radial-gradient(circle at 50% 95%, rgba(3, 78, 162, 0.045), transparent 46%);
+}

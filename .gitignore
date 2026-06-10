@@ -1,0 +1,37 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Runtime and generated data
+uploads/
+temp/
+*.log
+
+# Local database dumps can contain personal data and test records.
+*.sql
+!database/*.example.sql
+
+# OS/editor metadata
+desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+
+# Dependency/build folders
+node_modules/
+vendor/
+
+# Local backups and prototypes
+*.backup
+*.BAK
+index.php.backup
+index_new.html
+login_new.html
+
+# Large local installers
+*.exe
+
+# Keep generated CSS only if deliberately published.
+# assets/css/output.css

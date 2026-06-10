@@ -1,0 +1,10 @@
+{
+  "name": "udcs/unified-digital-claims-system",
+  "description": "Unified Digital Claims System PHP dependencies",
+  "type": "project",
+  "require": {
+    "php": ">=8.0",
+    "phpmailer/phpmailer": "6.9.1"
+  }
+}
+
